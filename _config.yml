@@ -6,4 +6,4 @@ sidebar_image: /images/cover.jpg
 # Build settings
 markdown: redcarpet
 highlighter: pygments
-baseurl: /zchen9.github.io # the subpath of your site, e.g. /blog/
+baseurl: # the subpath of your site, e.g. /blog/
