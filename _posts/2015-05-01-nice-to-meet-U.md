@@ -7,7 +7,7 @@ featured_image: /images/cover.jpg
 ---
 ##{{ page.title }}
 
-###Hello World & Let's start form GitHub :)
+###Hello World & Let's start form GitHub
 
 > "Hello World"
 
