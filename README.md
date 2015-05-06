@@ -13,5 +13,3 @@
 期待它能给我带来一个崭新而又刺激的新世界~
 
 ####zchen9 
-
-博客主题来自：[@hmfaysal](https://github.com/hmfaysal)
