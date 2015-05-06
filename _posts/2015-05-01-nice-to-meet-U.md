@@ -5,7 +5,6 @@ date:  2015-05-01
 categories: new_start
 featured_image: /images/cover.jpg
 ---
-##{{ page.title }}
 
 ###Hello World & Let's start form GitHub
 
