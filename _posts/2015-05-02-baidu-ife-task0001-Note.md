@@ -21,7 +21,9 @@ featured_image: /images/baidu-ife.jpg
 这个问题以前从来没有接触过，所以咨询了已经做完的同学，了解到可以用图片解决边角圆形的方法。
 很碰巧的，身旁的一本书，名为《html与css设计模式》（图灵程序设计丛书）里恰好介绍了圆角设计方法。
 书中写了好几种样式的写法，选择了最简洁版的，代码摘抄如下：
->
+
+{% highlight ruby %}
+
 	.mbg {
 	padding: 10px;
 	width: 40%;
@@ -32,6 +34,7 @@ featured_image: /images/baidu-ife.jpg
                 url("../img/rc.gif") bottom right no-repeat;
 	} 
 
+{% endhighlight %}
    
 * 优点：
 
