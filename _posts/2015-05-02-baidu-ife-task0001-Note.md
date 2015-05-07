@@ -123,8 +123,8 @@ featured_image: /images/baidu-ife.jpg
 
 {% highlight ruby %}
 
-    text-align: center /*相对父级元素的居中
-    margin: 0 auto //设置子元素居中
+    text-align: center /*相对父级元素的居中*/
+    margin: 0 auto /*设置子元素居中*/
 
 {% endhighlight %}
         
@@ -132,13 +132,13 @@ featured_image: /images/baidu-ife.jpg
 
 {% highlight ruby %}
 
-    //margin和transform的结合
-    //水平方法为：
+    /*margin和transform的结合*/
+    /*水平方法为：*/
 
     margin-left: 50%; 
     transform: translateX(-50%);
 
-    //以此类推，垂直居中的方法为：
+    /*以此类推，垂直居中的方法为*/
 
     margin-top:50%;
     transform: translateY(-50%);
