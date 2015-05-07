@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-	font-family: "consolas";
-	src: url('../font/YaHei.Consolas.1.11b.ttf');
-}
-
 html,
 body {
   height: 100%;
