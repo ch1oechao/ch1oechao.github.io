@@ -100,8 +100,8 @@ header {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
+  -webkit-filter: opacity(.9);
+  filter: opacity(.9);
   overflow: hidden;
 }
 
@@ -196,6 +196,7 @@ header .home_button {
   -webkit-transition: background 300ms linear;
 }
 
+
 header .home_button:hover {
   background: #fff;
   background-image: url(../../images/icon_home_hover.png);
@@ -204,6 +205,89 @@ header .home_button:hover {
   color: #ce2323;
   transition: background 300ms linear;
   -webkit-transition: background 300ms linear;
+}
+
+header > input{
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  width: 38px;
+  height: 38px;
+  z-index: 1000;
+  opacity: 0;
+}
+
+header .list_button{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: block;
+  width: 21px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  line-height: 5px;
+  text-indent: -.3em;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  transition: background 300ms linear;
+  -webkit-transition: background 300ms linear;
+}
+input:hover + .list_button{
+  background: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ce2323;
+  transition: background 300ms linear;
+  -webkit-transition: background 300ms linear;
+}
+
+/*info*/
+
+header .info{
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  background-color: rgba(0,0,0,.9);
+}
+
+.info a{
+  float: left;
+  display: block;
+
+  height: 30px;
+  width: 30px;
+  padding: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-filter:invert(.5);
+  filter: invert(.5);
+}
+.info a:hover{
+  -webkit-filter:invert(.9);
+  filter: invert(.9);
+}
+
+.github_button{
+  margin-left: 20px;
+  background-image: url(../../images/icon_github.png);
+}
+
+.email_button{
+  background-image: url(../../images/icon_mail.png);
+}
+
+.info span{
+  display: block;
+  font-size: 12px;
+  color: #666;
+  padding-top: 8px;
 }
 
 header ul.meta {
@@ -233,6 +317,7 @@ header ul.meta li span {
   font-style: italic;
   color: rgba(255, 255, 255, .5);
 }
+
 
 /* Pagination */
 
@@ -332,6 +417,19 @@ article a {
 
 article a:hover {
   text-decoration: underline;
+}
+
+article b{
+  font-size: 1.5em;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+article time{
+  font-size: 1.2em;
+  padding: 5px;
+  font-weight: 600;
+  display: block;
 }
 
 /* Posts List */

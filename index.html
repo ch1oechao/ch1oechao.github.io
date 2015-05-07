@@ -2,6 +2,8 @@
 layout: default 
 ---
 <header id="home-header" style="background-image: url({{ site.baseurl }}{{ site.sidebar_image }});">
+  <input type="radio" name="radio-set">
+  <a href="#myinfo" class="list_button">F</a>
   <div class="container">
     <h1>{{ site.title }}</h1>
     <ul class="meta">
@@ -11,6 +13,13 @@ layout: default
         </span>
       </li>
   </div>
+
+  <div class="info" id="myinfo">
+    <a href="https://github.com/zchen9" target="_blank" class="github_button"></a>
+    <a href="mailto:zxcvbnm.pop@qq.com" class="email_button"></a>
+    <span>&copy; 2015 zchen9</span>
+  </div>
+
 </header>
 <article>
   <div class="container">
