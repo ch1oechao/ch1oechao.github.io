@@ -123,7 +123,7 @@ featured_image: /images/baidu-ife.jpg
 
 {% highlight ruby %}
 
-    text-align: center //相对父级元素的居中
+    text-align: center /*相对父级元素的居中
     margin: 0 auto //设置子元素居中
 
 {% endhighlight %}
