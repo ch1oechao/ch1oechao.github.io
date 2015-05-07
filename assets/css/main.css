@@ -188,7 +188,7 @@ header .home_button {
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   text-align: center;
-  background-image: url(../images/icon_home.png);
+  background-image: url(../../images/icon_home.png);
   background-position: center;
   background-repeat: no-repeat;
   padding: 20px;
@@ -198,7 +198,7 @@ header .home_button {
 
 header .home_button:hover {
   background: #fff;
-  background-image: url(../images/icon_home_hover.png);
+  background-image: url(../../images/icon_home_hover.png);
   background-position: center;
   background-repeat: no-repeat;
   color: #ce2323;
