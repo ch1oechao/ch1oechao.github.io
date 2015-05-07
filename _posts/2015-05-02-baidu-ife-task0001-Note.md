@@ -24,15 +24,15 @@ featured_image: /images/baidu-ife.jpg
 
 {% highlight ruby %}
 
-    .mbg {
-    padding: 10px;
-    width: 40%;
-    overflow: hidden;
-    background: url("../img/trc.gif") top right no-repeat,
-                url("../img/blc.gif") bottom left no-repeat,
-                url("../img/rc.gif") top left no-repeat,
-                url("../img/rc.gif") bottom right no-repeat;
-    } 
+.mbg {
+padding: 10px;
+width: 40%;
+overflow: hidden;
+background: url("../img/trc.gif") top right no-repeat,
+            url("../img/blc.gif") bottom left no-repeat,
+            url("../img/rc.gif") top left no-repeat,
+            url("../img/rc.gif") bottom right no-repeat;
+} 
 
 {% endhighlight %}
    
@@ -56,48 +56,51 @@ featured_image: /images/baidu-ife.jpg
 
 {% highlight ruby %}
 
-    .radius{
-        width: 40%;
-    }
-    .top{
-        border-top-color:#000;
-        border-bottom:3px solid #000;
-        border-left:3px dotted transparent;
-        border-right:3px dotted transparent;
-    }
-    .center{
-        color: #FFF;
-        overflow: hidden;
-        padding: 10px;
-        background-color: #000;
-    }
-    .bot{
-        border-top:3px solid #000;
-        border-bottom-color:#000;
-        border-left:3px dotted transparent;
-        border-right:3px dotted transparent;
-    }
+.radius{
+    width: 40%;
+}
+.top{
+    border-top-color:#000;
+    border-bottom:3px solid #000;
+    border-left:3px dotted transparent;
+    border-right:3px dotted transparent;
+}
+.center{
+    color: #FFF;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #000;
+}
+.bot{
+    border-top:3px solid #000;
+    border-bottom-color:#000;
+    border-left:3px dotted transparent;
+    border-right:3px dotted transparent;
+}
 
 {% endhighlight %}
     
 * 实现原理：
 	
-	通过边框的dotted样式，巧妙的将边框变成梯形，
-	
-	这样交接处形成一个重合，看起来像切掉了矩形框的尖角，
-	
-	只要设置恰当的边框宽度，可以近似成圆角
+通过边框的dotted样式，巧妙的将边框变成梯形，
+
+这样交接处形成一个重合，看起来像切掉了矩形框的尖角，
+
+只要设置恰当的边框宽度，可以近似成圆角
     
 * 优点：
 
-	达到题目要求，宽度和高度都可以自适应且可复用。
-	无需另外加载图片。
+达到题目要求，宽度和高度都可以自适应且可复用。
+
+无需另外加载图片。
 
 * 缺点：
 
-	必须将圆角矩形内的背景颜色和边框颜色保持一致，不然会露馅...（外部背景颜色无所谓）
-	IE不支持...
-	圆角矩形的边框宽度不能改变，一改变边框宽度的话，边角就不像圆角了。
+必须将圆角矩形内的背景颜色和边框颜色保持一致，不然会露馅...（外部背景颜色无所谓）
+
+IE不支持...
+
+圆角矩形的边框宽度不能改变，一改变边框宽度的话，边角就不像圆角了。
     
 #####2、实现两列布局/三列布局。
 
@@ -123,8 +126,8 @@ featured_image: /images/baidu-ife.jpg
 
 {% highlight ruby %}
 
-    text-align: center /*相对父级元素的居中*/
-    margin: 0 auto /*设置子元素居中*/
+text-align: center /*相对父级元素的居中*/
+margin: 0 auto /*设置子元素居中*/
 
 {% endhighlight %}
         
@@ -132,35 +135,35 @@ featured_image: /images/baidu-ife.jpg
 
 {% highlight ruby %}
 
-    /*margin和transform的结合*/
-    /*水平方法为：*/
+/*margin和transform的结合*/
+/*水平方法为：*/
 
-    margin-left: 50%; 
-    transform: translateX(-50%);
+margin-left: 50%; 
+transform: translateX(-50%);
 
-    /*以此类推，垂直居中的方法为*/
+/*以此类推，垂直居中的方法为*/
 
-    margin-top:50%;
-    transform: translateY(-50%);
+margin-top:50%;
+transform: translateY(-50%);
 
 {% endhighlight %}
 
 这个时候元素可能百分百做到想要的居中效果了，但问题又来了：
 transfrom属于CSS3，伺候不了IE...
         
- flexbox实现居中
+flexbox实现居中
 
 {% highlight ruby %}
 
-    .parent {
-      display: flex;
-      height: 300px; /* Or whatever */
-    }
-    .child {
-      width: 100px;  /* Or whatever */
-      height: 100px; /* Or whatever */
-      margin: auto;  /* Magic! */
-    }   
+.parent {
+  display: flex;
+  height: 300px; /* Or whatever */
+}
+.child {
+  width: 100px;  /* Or whatever */
+  height: 100px; /* Or whatever */
+  margin: auto;  /* Magic! */
+}   
 
 {% endhighlight %}
         
@@ -266,18 +269,18 @@ gallery页面也有：照片标题前的分类字母、排行榜前的顺序数�
 
 {% highlight ruby %}
 
-    ul {
-        /* 栏宽度 */
-        -webkit-column-width:160px;
-        -moz-column-width:160px;
-        -o-colum-width:160px;
-        column-width:160px;
-        /* 两栏之间的间距 */
-        -webkit-column-gap:1px;
-        -moz-column-gap:1px;
-        -o-column-gap:1px;
-        column-gap:1px;
-     }
+ul {
+    /* 栏宽度 */
+    -webkit-column-width:160px;
+    -moz-column-width:160px;
+    -o-colum-width:160px;
+    column-width:160px;
+    /* 两栏之间的间距 */
+    -webkit-column-gap:1px;
+    -moz-column-gap:1px;
+    -o-column-gap:1px;
+    column-gap:1px;
+}
 
 {% endhighlight %}
 
@@ -299,7 +302,7 @@ http://www.w3cplus.com/css3/a-guide-to-flexbox.html
          
 #####排行榜的进度条问题
          
-进度条的标签用的是html5的新标签 < progress >
+进度条的标签用的是html5的新标签 < progress>
 
 使用之后发现，每个浏览器对它的支持效果都不一样，也是深深醉了...
 
@@ -309,7 +312,7 @@ http://www.w3cplus.com/css3/a-guide-to-flexbox.html
 
 ######review更新：
 
-< progress >为html5标签,兼容性较差。若要实现设计图的排行榜，用ol+div结构，进度条中应当用隐藏的文字标注当前的进度。
+< progress>为html5标签,兼容性较差。若要实现设计图的排行榜，用ol+div结构，进度条中应当用隐藏的文字标注当前的进度。
         
 #####4、about.html
 
