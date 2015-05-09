@@ -11,7 +11,7 @@
     color: #FFF;
 
     clear: both; /* 清除左右浮动 */ 
-    width: 580px; /* 必须定义宽度 */ 
+    width: 585px; /* 必须定义宽度 */ 
     word-break: break-word; /* 文本行的任意字内断开 */ 
     word-wrap: break-word; /* IE */ 
     white-space: -moz-pre-wrap; /* Mozilla */ 
@@ -50,13 +50,13 @@
 .highlight .nb { color: #f8f8f2 } /* Name.Builtin */
 .highlight .nc { color: #a6e22e } /* Name.Class */
 .highlight .no { color: #66d9ef } /* Name.Constant */
-.highlight .nd { color: #a6e22e } /* Name.Decorator */
+.highlight .nd { color: #e7e7e7 } /* Name.Decorator */
 .highlight .ni { color: #f8f8f2 } /* Name.Entity */
 .highlight .ne { color: #a6e22e } /* Name.Exception */
 .highlight .nf { color: #a6e22e } /* Name.Function */
 .highlight .nl { color: #f8f8f2 } /* Name.Label */
 .highlight .nn { color: #f8f8f2 } /* Name.Namespace */
-.highlight .nx { color: #a6e22e } /* Name.Other */
+.highlight .nx { color: #e7e7e7 } /* Name.Other */
 .highlight .py { color: #f8f8f2 } /* Name.Property */
 .highlight .nt { color: #f92672 } /* Name.Tag */
 .highlight .nv { color: #f8f8f2 } /* Name.Variable */

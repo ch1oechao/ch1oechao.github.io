@@ -9,6 +9,7 @@
 html,
 body {
   height: 100%;
+  min-width: 650px;
 }
 
 body {
@@ -407,7 +408,10 @@ article li {
 
 @media (max-width: 960px) {
   article li {
-    margin-left: 0;
+    margin-left: 2em;
+
+    margin-bottom: 5px;
+    margin-top: 10px;
   }
 }
 
