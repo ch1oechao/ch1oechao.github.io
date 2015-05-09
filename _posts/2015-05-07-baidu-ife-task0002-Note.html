@@ -25,7 +25,7 @@ featured_image: /images/baidu-ife.jpg
 <section>
     <h2 id="util">&gt; util.js</h2>
 
-    <h3>[正则表达式]( Regular Expression / regex / regexp / RE )</h3>
+    <h3>[正则表达式 Regular Expression/regex]</h3>
     
     <p>
         <b>常用元字符</b>
@@ -188,7 +188,16 @@ null === undefined  // false
         <b>复杂数据类型</b>
         <p>
             <span> Object </span>
+            <blockquote>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                包含在对象里的数据可以通过两种形式访问——属性(property)和方法(method)。
+                <ul>
+                    <li>属性是隶属于某个特定对象的变量</li>
+                    <li>方法是只有某个特定的对象才能调用的函数</li>
+                </ul>
+            </blockquote>
             <p>
+                <span>&gt; Object的每个实例都具有的属性和方法</span>
 {% highlight javascript %}
 
 constructor  //保存着用于创建当前对象的函数
@@ -196,6 +205,19 @@ constructor  //保存着用于创建当前对象的函数
 hasOwnProperty(propertyName)  //用于检查给定的属性在当前对象实例中是否存在
 
 isPrototypeOf(object)  //用于检查传入的对象是否是传入对象的原型
+
+propertyIsEnumerable(propertyName)  //用于检查给定的属性是否能够使用for-in语句来枚举
+
+toLocateString()  //返回对象的字符串表示，该字符串与执行环境的地区相对应
+
+toString()  //返回对象的字符串表示
+
+valueOf()  //返回对象的字符串、数值或布尔值表示，通常与toString()方法的返回值相同
+ 
+/*
+ * 以上作为参数的属性名propertyName必须以字符串形式
+ * 例：o.hasOwnProperty("name")
+ */
 
 {% endhighlight %}
             </p>

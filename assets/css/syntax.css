@@ -1,11 +1,25 @@
 .highlight  { 
-	background: #f0f0f0; 
-	font-size: 15px; 
-	line-height: 18px; 
-	font-family: 'consolas','Mircosoft Yahei',arial, Serif;
-	padding: 15px;
-	margin-top: 10px;
-	margin-bottom: 20px; 
+    overflow: hidden;
+
+    background: #f0f0f0; 
+    font-size: 15px; 
+    line-height: 18px; 
+    font-family: 'Mircosoft Yahei','consolas',arial, Serif;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px; 
+
+    clear: both; /* 清除左右浮动 */ 
+    width: 580px; /* 必须定义宽度 */ 
+    word-break: break-word; /* 文本行的任意字内断开 */ 
+    word-wrap: break-word; /* IE */ 
+    white-space: -moz-pre-wrap; /* Mozilla */ 
+    white-space: -hp-pre-wrap; /* HP printers */ 
+    white-space: -o-pre-wrap; /* Opera 7 */ 
+    white-space: -pre-wrap; /* Opera 4-6 */ 
+    white-space: pre; /* CSS2 */ 
+    white-space: pre-wrap; /* CSS 2.1 */ 
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */ 
 }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
