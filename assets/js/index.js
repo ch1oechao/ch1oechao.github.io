@@ -10,8 +10,6 @@ window.onload = function(){
 	var scrollWidth = document.body.scrollWidth;
 	var scrollHeight = document.body.scrollHeight;
 
-	pageWarp.style.top = -scrollHeight +"px";
-
 	infoBtn.onclick = function(){
 
 		var clientWidth = document.documentElement.clientWidth || document.body.offsetWidth;
