@@ -209,16 +209,6 @@ header .home_button:hover {
   -webkit-transition: background 300ms linear;
 }
 
-header > input{
-  position: absolute;
-  top: 10px;
-  left: 8px;
-  width: 38px;
-  height: 38px;
-  z-index: 1000;
-  opacity: 0;
-}
-
 header .list_button{
   position: absolute;
   top: 10px;
@@ -239,7 +229,7 @@ header .list_button{
   transition: background 300ms linear;
   -webkit-transition: background 300ms linear;
 }
-input:hover + .list_button{
+.list_button:hover {
   background: #fff;
   background-position: center;
   background-repeat: no-repeat;
@@ -252,44 +242,18 @@ input:hover + .list_button{
 
 header .info{
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   text-align: center;
   width: 100%;
-  height: 40px;
-  background-color: rgba(0,0,0,.9);
-}
-
-.info a{
-  float: left;
-  display: block;
-
-  height: 30px;
-  width: 30px;
-  padding: 20px;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-filter:invert(.5);
-  filter: invert(.5);
-}
-.info a:hover{
-  -webkit-filter:invert(.9);
-  filter: invert(.9);
-}
-
-.github_button{
-  margin-left: 20px;
-  background-image: url(../../images/icon_github.png);
-}
-
-.email_button{
-  background-image: url(../../images/icon_mail.png);
+  height: 35px;
+  background-color: rgba(0,0,0,.5);
 }
 
 .info span{
   display: block;
   font-size: 12px;
   color: #666;
-  padding-top: 8px;
+  padding-top: 4px;
 }
 
 header ul.meta {
@@ -443,6 +407,211 @@ section {
     font-family: 'Microsoft YaHei',arial,serif;
 }
 
+/*info_page*/
+
+.blur {
+	filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+	-webkit-filter: blur(5px); /* Chrome, Opera */
+	-moz-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false); /* IE6~IE9 */
+}
+
+.info_page {
+	position: absolute;
+
+	background-color: rgba(0,0,0,.8);
+
+	color: #ededed;
+	font-size: 15px;
+
+	transition: .3s ease-in-out top;
+}
+
+.info_page .home_button {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	display: block;
+	width: 21px;
+	height: 18px;
+	border-radius: 4px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	line-height: 40px;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.5);
+	text-decoration: none;
+	text-align: center;
+	background-image: url(../../images/icon_home.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 20px;
+	transition: background 300ms linear;
+	-webkit-transition: background 300ms linear;
+}
+
+
+.info_page .home_button:hover {
+	background: #fff;
+	background-image: url(../../images/icon_home_hover.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #ce2323;
+	transition: background 300ms linear;
+	-webkit-transition: background 300ms linear;
+}
+
+.info_menu {
+	float: left;
+
+	width: 35%;
+	height: 100%;
+
+	background-color: rgba(0,0,0,.2);
+}
+
+.info_menu ul{
+	margin-left: 70px;
+	margin-top: 200px;
+
+	font-size: 1.2em;
+
+	list-style: none;
+}
+
+.info_menu li{
+	margin: 10px;
+	font-weight: 700;
+	cursor: pointer;
+}
+.info_menu li:hover{
+	color: #ce2323;
+}
+
+.info_menu ul .active{
+	color: #ce2323;
+}
+
+.info_content {
+	position: relative;
+
+	float: left;
+	width: 65%;
+	height: inherit;
+
+	background-color: rgba(0,0,0,.5);
+}
+.info_content article {
+	width: 100%;
+	overflow: hidden;
+}
+
+.icon_chen {
+	margin-top: 80px;
+	margin-left: 38%;
+
+	width: 160px;
+	height: 160px;
+	border-radius: 160px;
+	background-image: url("../../images/icon_zchen9.png");
+}
+
+
+.info_me {
+	display: none;
+
+	margin: 30px 100px;
+
+	text-indent: 2em;
+}
+
+.info_me h1{
+	margin: 20px 0;
+	font-size: 20px;
+	text-align: left;
+}
+
+.info_me p {
+	margin: 5px 0;
+
+}
+
+.contact_me{
+
+	margin-top: 80px;
+	margin-left: 26%;
+}
+
+.contact_me span {
+	display: block;
+	margin-left: 5%;
+	margin-top: 80px;
+	margin-bottom: 30px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.contact_me a{
+	float: left;
+	display: block;
+
+	height: 48px;
+	width: 48px;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-filter:invert(.5);
+	filter: invert(.5);
+}
+.contact_me a:hover{
+	-webkit-filter:invert(.9);
+	filter: invert(.9);
+}
+
+.github_button{
+	margin-left: 30px;
+	background-image: url(../../images/icon_github.png);
+}
+.mail_button{
+	margin-left: 30px;
+	background-image: url(../../images/icon_mail.png);
+}
+.qq_button{
+	margin-left: 30px;
+	background-image: url(../../images/icon_qq.png);
+}
+.weibo_button{
+	margin-left: 30px;
+	background-image: url(../../images/icon_weibo.png);
+}
+
+@media (max-width: 960px) {
+	.info_menu {
+		width: 100%;
+		height: 280px;
+	}
+	.info_menu ul{
+		display: inline-flex;
+		font-size: 20px;
+	}
+	.info_content {
+		width: 100%;
+		height: 900px;
+	}
+	.info_content article {
+		width: 100%;
+		overflow: hidden;
+		background-color: #1e0010;
+	}
+	.icon_chen {
+		margin-top: 80px;
+		margin-left: 40%;
+	}
+	.contact_me{
+		margin-top: 100px;
+		margin-left: 28%;
+	}
+}
 /* Posts List */
 
 ul.posts li {
