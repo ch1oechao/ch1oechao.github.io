@@ -37,16 +37,19 @@ featured_image: /images/JavaScriptDOM.jpg
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 结构层由HTML或XHTML之类的标记语言负责创建。
                 标签(tag) 对网页内容的语义做出了描述。
+                使用有意义的标签来构建页面的结构。
             </blockquote>
             <li><span>[ 表示层 presentation layer ]</span></li>
             <blockquote>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 表示层由CSS完成。CSS描述页面内容应该如何呈现。
+                把表现性的信息都分离到CSS样式表中。
             </blockquote>
             <li><span>[ 行为层 behavior layer ]</span></li>
             <blockquote>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 行为层负责内容应该如何响应事件这一问题。这是JavaScript和DOM主宰的领域。
+                负责任地使用不唐突的JavaScript来应用行为增强，同时确保平稳退化。
             </blockquote>
         </ul>
 
@@ -192,18 +195,26 @@ function addClass(element,value) {
 {% highlight javascript %}
 
 function moveElement(elementID,final_x,final_y,interval) {
+
+    //添加安全检查，检测是否支持getElementById
     if(!document.getElementById) return false;
+
+    //添加安全检查，检测是否有elementId
     if(!document.getElementById(elementId)) return false;
+
     var elem = document.getElementById(elementID);
     if(elem.movement) {
         clearTimeout(elem.movement);
     }
+
+    //添加安全检查，检测elementId是否有left/top属性
     if(!elem.style.left) {
         elem.style.left = 0 + "px";
     }
     if(!elem.style.top) {
         elem.style.top = 0 + "px";
     }
+    
     var xpos = parseInt(elem.style.left);
     var ypos = paresInt(elem.style.top);
     var dist = 0;
