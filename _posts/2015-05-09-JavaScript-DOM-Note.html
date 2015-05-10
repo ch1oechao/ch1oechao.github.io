@@ -214,26 +214,26 @@ function moveElement(elementID,final_x,final_y,interval) {
     if(!elem.style.top) {
         elem.style.top = 0 + "px";
     }
-    
+
     var xpos = parseInt(elem.style.left);
     var ypos = paresInt(elem.style.top);
     var dist = 0;
-    if(xpos == final_x &amp;&amp; ypos == final_y){
+    if(xpos == final_x && ypos == final_y){
         return true;
     }
-    if(xpos &lt; final_x) {
+    if(xpos < final_x) {
         dist = Math.ceil((final_x - xpos)/10);
         xpos = xpos + dist;
     }
-    if(xpos &gt; final_x) {
+    if(xpos > final_x) {
         dist = Math.ceil((xpos - final_x)/10);
         xpos = xpos - dist;
     }
-    if(ypos &lt; final_y) {
+    if(ypos < final_y) {
         dist = Math.ceil((final_y - xpos)/10);
         ypos = ypos + dist;
     }
-    if(ypos &gt; final_y) {
+    if(ypos > final_y) {
         dist = Math.ceil((xpos - final_y)/10);
         ypos = ypos - dist;
     }
