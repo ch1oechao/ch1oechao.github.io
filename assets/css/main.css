@@ -420,6 +420,7 @@ section {
 
 .info_page {
 	position: absolute;
+  top: -1000%;
 
 	background-color: rgba(0,0,0,.8);
 
