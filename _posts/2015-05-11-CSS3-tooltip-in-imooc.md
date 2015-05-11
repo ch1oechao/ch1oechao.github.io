@@ -23,7 +23,7 @@ featured_image: /images/imooc.jpg
 - 移动端处理：页面宽度=设备宽度，缩放为1，不放大
 
 
-        <meta name="viewport" content="width=device-width,inital-scale=">
+        <meta name="viewport" content="width=device-width,inital-scale=1">
 
 
 ###transform属性
