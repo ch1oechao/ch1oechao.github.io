@@ -100,7 +100,7 @@ function getElementsByClassName(node,classname) {
     else{
         var results = new Array();
         var elems = node.getElementsByTagName("*");
-        for(var i=0;i &lt; elems.length;i++){
+        for(var i=0;i < elems.length;i++){
             if(elems[i].className.indexOf(classname) != -1) {
             results[results.length] = elems[i];
             }
@@ -108,7 +108,6 @@ function getElementsByClassName(node,classname) {
         return results;
     }
 }
-
 {% endhighlight %}
         </p>
 

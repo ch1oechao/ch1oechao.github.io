@@ -6,8 +6,10 @@
   <title>{{ site.title + page.title }}</title>
   <meta name="viewport" content="width=device-width">
 
-  <!-- syntax highlighting CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/monikai.css">
+  <!-- highlight.js -->
+  <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/monokai_sublime.min.css">
+  <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/reset.css">
@@ -27,6 +29,6 @@
   {{ content }}
 
 	<script src="../assets/js/util.js"></script>
-    <script src="../assets/js/index.js"></script>
+  <script src="../assets/js/index.js"></script>
 </body>
 </html>
