@@ -6,11 +6,11 @@ categories: course_in_imooc
 featured_image: /images/imooc.jpg
 ---
 
-###CSS3 动画属性
+##CSS3 动画属性
 
 ---
 
-####CSS3使用注意事项
+###CSS3使用注意事项
 
 **< meta > 标签**
 
@@ -26,13 +26,13 @@ featured_image: /images/imooc.jpg
         <meta name="viewport" content="width=device-width,inital-scale=">
 
 
-####transform属性
+###transform属性
 
-- 功能：向元素应用2D或者3D转换
+- <span>功能</span>：向元素应用2D或者3D转换
 
-- 语法：transform: none | transform-function 
+- <span>语法</span>：transform: none | transform-function 
 
-- 参数：
+- <span>参数</span>：
 
         translate3d(x,y,z) //定义3D转化
     
@@ -40,13 +40,13 @@ featured_image: /images/imooc.jpg
     
         scale3d(x,y,z,flex) //定义3D缩放
 
-####transition属性
+###transition属性
 
-- 功能：在一定时间区间内平滑地过度指定的属性值
+- <span>功能</span>：在一定时间区间内平滑地过度指定的属性值
 
-- 语法：transform: property duration timing-function delay 
+- <span>语法</span>：transform: property duration timing-function delay 
 
-- 参数：
+- <span>参数</span>：
 
         property //规定设置过度效果的CSS属性名称
     
@@ -56,12 +56,12 @@ featured_image: /images/imooc.jpg
 
         transition-delay //定义过度效果何时开始
 
-####:after与:before用法
+###:after与:before用法
 
-- :after选择器：在被选元素的内容后面插入内容
+- <span>:after选择器</span>：在被选元素的内容后面插入内容
 
-- :before选择器：在被选元素的内容前面插入内容
+- <span>:before选择器</span>：在被选元素的内容前面插入内容
 
-- 说明： 需要使用content属性来指定要插入内容 
+- <span>说明</span>： 需要使用content属性来指定要插入内容 
 
-- 浏览器兼容：对IE8及更早版本的:after，必须声明<!DOCTYPE>
+- <span>浏览器兼容</span>：对IE8及更早版本的:after，必须声明<!DOCTYPE>
