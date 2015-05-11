@@ -4,9 +4,19 @@ window.onload = function(){
 	var pageWarp = $("#info-warp");
 	var homeBtn = $("#home_btn");
 
+
 	var listInfo = $("#list_info");
 	var listCon = $("#list_contact");
 	var listAbout = $("#list_about");
+
+	listInfo.onclick = function(){
+		var infoMe = $(".info_me")[0];
+		addClass(infoMe,"info_show");
+	};
+	listCon.onclick = function(){
+		var contactMe = $(".contact_me")[0];
+		addClass(contactMe,"contact_show");
+	};
 
 
 	addEvent(infoBtn,"click",scrollDown);
@@ -14,16 +24,14 @@ window.onload = function(){
 
 	function scrollDown(){
 		var pageWarp = $("#info-warp");
-
-		var clientWidth = document.documentElement.clientWidth || document.body.offsetWidth;
-		var clientHeight = document.documentElement.clientHeight || document.body.offsetHeight;
+		var infoMe = $(".info_me")[0];
 
 		if(pageWarp){
 			pageWarp.style.top = 0 +"px";
-			pageWarp.style.width = clientWidth + "px";
-			pageWarp.style.height = clientHeight + "px";
+			pageWarp.style.width = 100 + "%";
+			pageWarp.style.height = 100 + "%";
+			addClass(infoMe,"info_show");
 		}
-
 	}
 
 	function scrollUp(){

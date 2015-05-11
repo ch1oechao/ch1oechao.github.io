@@ -4,7 +4,7 @@ tagline: 'To find something interesting ' # A brief tagline for your site
 sidebar_image: /images/cover.jpg
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 #highlighter: pygments
 highlighter: true
 baseurl: # the subpath of your site, e.g. /blog/
