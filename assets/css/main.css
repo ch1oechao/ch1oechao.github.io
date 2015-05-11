@@ -218,9 +218,6 @@ header .list_button{
   height: 18px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  line-height: 5px;
-  text-indent: -.3em;
-  font-size: 18px;
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   background-position: center;
@@ -228,6 +225,13 @@ header .list_button{
   padding: 20px;
   transition: background 300ms linear;
   -webkit-transition: background 300ms linear;
+}
+.list_button i{
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 1.3em;
+
 }
 .list_button:hover {
   background: #fff;
