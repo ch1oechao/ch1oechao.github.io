@@ -26,10 +26,19 @@ window.onload = function(){
 		var pageWarp = $("#info-warp");
 		var infoMe = $(".info_me")[0];
 
+		var clientWidth = document.documentElement.clientWidth;
+		var scrollHeight = document.body.scrollHeight;
+
 		if(pageWarp){
+			if(clientWidth < 980){
+				pageWarp.style.height = scrollHeight + "px";
+			}else{
+				pageWarp.style.height = 100 + "%";
+			}
 			pageWarp.style.top = 0 +"px";
 			pageWarp.style.width = 100 + "%";
-			pageWarp.style.height = 100 + "%";
+			pageWarp.style.opacity = 1;
+			pageWarp.style.zIndex = 9999;
 			addClass(infoMe,"info_show");
 		}
 	}

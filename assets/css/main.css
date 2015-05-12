@@ -44,12 +44,12 @@ h2 {
   font-weight: 600;
   font-size: 24px;
   margin-bottom: 18px;
-  margin-top: 36px;
+  margin-top: 18px;
 }
 
 h3{
     margin-bottom: 15px;
-    margin-top: 50px;
+    margin-top: 15px;
     font-size: 1.3em;
     font-weight: 600;
 }
@@ -106,8 +106,12 @@ header {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  -webkit-filter: opacity(.9);
-  filter: opacity(.9);
+
+  -webkit-filter: opacity(1);
+  -moz-filter: opacity(1);
+  -ms-filter: opacity(1);
+  -o-filter: opacity(1);
+  filter: opacity(1);
   overflow: hidden;
 }
 
@@ -353,7 +357,6 @@ article {
   overflow-x: hidden;
 }
 
-
 article .container {
   padding-top: 80px;
 }
@@ -430,14 +433,17 @@ section {
 	position: absolute;
   top: -200%;
 
+  opacity: 0;
+  z-index: -1;
+
 	color: #ededed;
 	font-size: 15px;
 
-	transition: .5s ease-in-out top;
-  -o-transition: .5s ease-in-out top;
-  -ms-transition: .5s ease-in-out top;
-  -moz-transition: .5s ease-in-out top;
-  -webkit-transition: .5s ease-in-out top;
+	transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
 }
 
 .info_page .home_button {
@@ -649,6 +655,21 @@ section {
 }
 
 @media (max-width: 960px) {
+
+  .info_page {
+    position: absolute;
+    top: -300%;
+
+    opacity: 0;
+    z-index: -1;
+
+    transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+  }
+
 	.info_menu {
 		width: 100%;
 		height: 280px;
@@ -699,18 +720,38 @@ section {
 /* Posts List */
 
 ul.posts li {
-  list-style-type: none;
-  border-bottom: 1px solid #eeeeee;
+  list-style: none;
+  /*border-bottom: 1px solid #eeeeee;*/
+  margin: 0 2em 50px;
+
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+ul.posts li:hover {
+  padding-left: 30px;
+  border-left: 15px solid #CE2323;
+
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 ul.posts .meta {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
   color: #8d8d8d;
 }
 
+ul.posts h3 {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
 ul.posts p {
-  margin: 30px 0;
+  margin: 10px 0;
 }
 
 span{

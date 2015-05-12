@@ -6,7 +6,7 @@ categories: course_in_imooc
 featured_image: /images/imooc.jpg
 ---
 
-##CSS3 动画属性
+###CSS3 动画属性
 
 ---
 
