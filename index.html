@@ -24,11 +24,13 @@ layout: default
     <ul class="posts">
       {% for post in site.posts %}
         <li>
-          <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-          <span class="meta">
-            {{ post.date | date_to_string }}
-          </span>
-          {{ post.excerpt }}
+          <a href="{{ site.baseurl }}{{ post.url }}">
+          	<h2>{{ post.title }}</h2>
+          	<span class="meta">
+            	{{ post.date | date_to_string }}
+          	</span>
+          	{{ post.excerpt }}
+          </a>
         </li>
       {% endfor %}
     </ul>

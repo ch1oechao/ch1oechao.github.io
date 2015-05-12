@@ -390,13 +390,13 @@ article li {
   }
 }
 
-article a {
+article a:link,a:visited {
   color: #CE2323;
   text-decoration: none;
 }
 
-article a:hover {
-  text-decoration: underline;
+article a:hover,a:active {
+  text-decoration: none;
 }
 
 article b{
@@ -416,6 +416,10 @@ article time{
 
 section {
     font-family: 'Microsoft YaHei',arial,serif;
+}
+
+article h3{
+  color: #000;
 }
 
 /*info_page*/
