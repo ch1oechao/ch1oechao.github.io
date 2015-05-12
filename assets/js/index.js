@@ -9,6 +9,51 @@ window.onload = function(){
 	var listCon = $("#list_contact");
 	var listAbout = $("#list_about");
 
+	var audioPlay = $("#audioplay");
+
+	audioPlay.onclick = function(){
+		if(audioPlay.className.indexOf("spin") == -1){
+			addClass(audioPlay,"fa-spin");
+			appendMusic();
+		}else{
+			audioPlay.setAttribute("class","fa fa-music");
+			var audioElement = $("#playMusic");
+			var myInfo = $("#myinfo").childNodes;
+			for(var  i=0,len=myInfo.length;i<len;i++){
+				if(myInfo[i].tagName == "audio"){
+					console.log(myInfo[i]);
+					myInfo[i].parentNode.removeChild(this);
+				}
+			}
+			// if(audioElement){
+			// 	while(audioElement.hasChildNodes()){
+			// 		audioElement.removeChild(audioElement.firstChild);
+			// 	}
+			// }
+		}
+		
+	};
+
+	function appendMusic(){
+
+		var myInfo = $("#myinfo");
+		var audioPlay = $("#audioplay");
+		var audioElement = document.createElement("audio");
+		audioElement.setAttribute("autoplay","autoplay");
+		audioElement.setAttribute("id","playMusic");
+
+		var audioSourceOgg = document.createElement("source");
+		audioSourceOgg.setAttribute("src","http://7xic0o.com1.z0.glb.clouddn.com/zchen9A Sky Full of Stars.ogg");
+		audioSourceOgg.setAttribute("type","audio/ogg");
+		var audioSourceMp3 = document.createElement("source");
+		audioSourceMp3.setAttribute("src","http://7xic0o.com1.z0.glb.clouddn.com/zchen9A Sky Full of Stars.mp3");
+		audioSourceMp3.setAttribute("type","audio/mpeg");
+
+		audioElement.appendChild(audioSourceOgg);
+		audioElement.appendChild(audioSourceMp3);
+		myInfo.appendChild(audioElement);
+	};
+
 	listInfo.onclick = function(){
 		var infoMe = $(".info_me")[0];
 		addClass(infoMe,"info_show");
