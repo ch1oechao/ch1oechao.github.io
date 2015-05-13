@@ -873,7 +873,7 @@ span{
   height: 60px !important;
   border-radius: 40px !important;
   border: 6px solid #FFF !important;
-  box-shadow: 2px 2px 5px #CE2323 !important;
+  box-shadow: 3px 2px 1px #CE2323 !important;
 }
 
 .ds-post-self .ds-avatar img { 
