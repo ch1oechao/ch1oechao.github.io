@@ -277,6 +277,15 @@ header .info{
 .info .fa-music:hover{
     color: #FFF;
 }
+.info audio{
+  position: absolute;
+  bottom: 0;
+  display: block;
+  margin-left: -15px;
+  width: 30px;
+  height: 5px;
+  opacity: 0;
+}
 
 .info b{
   color: #CCC;
