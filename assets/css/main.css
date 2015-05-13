@@ -690,6 +690,11 @@ article .post-comment{
 
 @media (max-width: 960px) {
 
+  header .info{
+    padding-left: 32%;
+    background-color: rgba(0,0,0,.3);
+  }
+
   .info_page {
     position: absolute;
     top: -300%;
