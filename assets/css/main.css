@@ -439,6 +439,19 @@ article h3{
   color: #000;
 }
 
+article .post-comment{
+  margin-top: 80px;
+}
+.post-comment span{
+  display: inline-block;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 600;
+  border-bottom: 5px solid #CE2323;
+}
+
 /*info_page*/
 
 .blur {
