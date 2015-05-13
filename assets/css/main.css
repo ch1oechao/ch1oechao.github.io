@@ -836,3 +836,83 @@ span{
     white-space: pre-wrap; /* CSS 2.1 */ 
     white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */ 
 }
+
+/*comment*/
+
+.ds-thread{
+  margin-bottom: 60px;
+}
+
+.ds-thread .ds-sync,.ds-meta{
+  display: none !important;
+}
+
+.ds-thread .ds-comments-tab-duoshuo{
+  border: none !important;
+  background: none !important;
+}
+
+.ds-thread .ds-avatar img { 
+  margin-top: 12% !important;
+  margin-left: 6% !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 40px !important;
+  border: 6px solid #FFF !important;
+  box-shadow: 2px 2px 5px #CE2323 !important;
+}
+
+.ds-post-self .ds-avatar img { 
+  margin-top: 12% !important;
+  margin-left: 20% !important;
+}
+
+.ds-comment-body .ds-comment-header{
+  padding-top: 6px !important;
+}
+
+.ds-comment-body .ds-comment-header a:link,a:visited,a:active,a:hover{
+  color: #CE2323 !important;
+}
+
+.ds-comment-body .ds-comment-footer{
+  padding-top: 15px !important;
+  margin-left: -100px !important;
+  text-align: right !important;
+}
+
+.ds-thread .ds-comment-body{
+  padding: 20px 0 20px 110px !important;
+  /*background-color: #CCC !important;*/
+}
+
+.ds-thread .ds-replybox{
+  padding: 20px 0 20px 100px !important;
+  margin: 10px !important;
+  /*width: 78% !important;*/
+  box-shadow: 2px 2px 5px #000 !important;
+}
+
+.ds-replybox .ds-post-button{
+  margin-right: 20px !important;
+  width: 80px !important;
+  background-color: #CCC !important;
+}
+
+.ds-replybox .ds-post-button:hover{
+  margin-right: 20px !important;
+  width: 80px !important;
+  background-color: #CE2323 !important;
+}
+
+.ds-thread .ds-comment-body{
+  box-shadow: 2px 2px 5px #000 !important;
+}
+
+.ds-replybox .ds-textarea-wrapper{
+  height: 70px !important;
+}
+.ds-replybox .ds-textarea-wrapper,.ds-post-options{
+  border: none !important;
+  background: none !important;
+}
