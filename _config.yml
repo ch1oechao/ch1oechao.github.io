@@ -5,10 +5,7 @@ sidebar_image: /images/cover.jpg
 
 
 # Build settings
-#markdown: kramdown
+markdown: kramdown
 #highlighter: pygments
-pygments:    true
 highlighter: true
 baseurl: # the subpath of your site, e.g. /blog/
-markdown:      maruku
-markdown_ext:  markdown,mkd,mkdn,md
