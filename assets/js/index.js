@@ -46,8 +46,9 @@ window.onload = function(){
 
 	function scrollUp(){
 		var pageWarp = $("#info-warp");
+		var scrollHeight = document.body.scrollHeight;
 		if(pageWarp){
-			pageWarp.style.top = -200 +"%" ;
+			pageWarp.style.top = -scrollHeight +"px" ;
 			pageWarp.style.opacity = 0;
 			pageWarp.style.zIndex = -1;
 		}

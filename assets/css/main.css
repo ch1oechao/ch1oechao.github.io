@@ -706,7 +706,7 @@ article .post-comment{
 
   .info_page {
     position: absolute;
-    top: -300%;
+    top: -500%;
 
     opacity: 0;
     z-index: -1;
