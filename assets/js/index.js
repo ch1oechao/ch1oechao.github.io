@@ -48,6 +48,8 @@ window.onload = function(){
 		var pageWarp = $("#info-warp");
 		if(pageWarp){
 			pageWarp.style.top = -200 +"%" ;
+			pageWarp.style.opacity = 0;
+			pageWarp.style.zIndex = -1;
 		}
 	}
 };
