@@ -381,6 +381,8 @@ header ul.meta li span {
 article {
   width: 65%;
   overflow-x: hidden;
+  text-align: justify;
+  text-justify: inter-ideograph;
 }
 
 article .container {
