@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "JavaScript构造函数学习笔记"
+title:  "Constructed Function Notes in JavaScript"
 date:  2015-05-15
 categories: JavaScript
 featured_image: /images/js.jpg
 ---
 
-###Constructed Function of Object Notes in JavaScript
+###JavaScript构造函数学习笔记
 
 ---
 

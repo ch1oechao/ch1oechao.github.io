@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "JavaScript原型学习笔记"
+title:  "Prototype of Object Notes in JavaScript"
 date:  2015-05-15
 categories: JavaScript
 featured_image: /images/js.jpg
 ---
 
-###Prototype of Object Notes in JavaScript
+###JavaScript原型学习笔记
 
 ---
 

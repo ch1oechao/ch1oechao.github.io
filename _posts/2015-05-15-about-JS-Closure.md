@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "JavaScript闭包学习笔记"
+title:  "Closure Notes in JavaScript"
 date:  2015-05-15
 categories: JavaScript
 featured_image: /images/js.jpg
 ---
 
-###Closure of Object Notes in JavaScript
+###JavaScript闭包学习笔记
 
 ---
 

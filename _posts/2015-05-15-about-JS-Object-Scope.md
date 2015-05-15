@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "JavaScript作用域学习笔记"
+title:  "Scope of Object Notes in JavaScript"
 date:  2015-05-15
 categories: JavaScript
 featured_image: /images/js.jpg
 ---
 
-###Scope of Object Notes in JavaScript
+###JavaScript作用域学习笔记
 
 ---
 
