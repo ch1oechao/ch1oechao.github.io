@@ -2,7 +2,7 @@
 layout: post
 title:  "关于 JS 面向对象"
 date:  2015-05-15
-categories: JS
+categories: JavaScript
 featured_image: /images/js.jpg
 ---
 
@@ -88,3 +88,196 @@ JavaScript是一种宽松型（loosely-typed）的语言也是一种动态语言
         console.log(freeman); //"I'm in prison"
     }
     prison();
+
+<b>高级变量提升</b>
+
+JavaScript引擎在进入作用域时，会对代码分为两轮处理。第一轮，初始化变量；第二轮，执行代码。
+
+第一轮，JavaScript引擎分析代码，并做了以下三件事：
+
+- 声明并初始化函数参数。
+- 声明局部变量，包括将匿名函数赋给一个局部变量，但不初始化它们。
+- 声明并初始化函数。
+
+<b>执行环境和执行环境对象</b>
+
+执行环境由函数在执行时发生的所有事物组成。这和函数申明是分离的，因为函数声明描述了当前函数执行的时候会发生什么事情。执行环境是指函数的执行。
+
+属于执行环境部分的变量和函数，被保存在执行环境对象中，执行环境对象是执行环境的ECMA标准的实现。在JavaScript中，执行环境对象是一种对象，每次使用变量其实就是在访问执行环境对象的属性。
+
+<b>作用域链</b>
+
+JavaScript引擎在执行环境对象中访问作用域内的变量，查找的顺序叫做作用域链。
+
+当在查找变量的定义时，JavaScript引擎首先在局部执行环境对象上查找。如果没有定义，则跳出作用域链，到创建它的执行环境中去，并且在该执行环境对象中查找变量的定义，以此类推，直到找到定义或者到达全局作用域为止。
+
+    //在全局作用域里，设置chen
+    var chen = "I'm here";
+    //调用作用域: 全局
+    console.log(chen); // "I'm here" 匹配全局chen
+
+    function superchen(){
+
+        //在superchen作用域里，设置chen
+        var chen = "I'm not there";
+        //调用作用域: 全局->superchen
+        console.log(chen); //"I'm not there" 匹配superchen
+
+        function prison(){
+            var chen;
+            //调用作用域: 全局->superchen->prison
+            console.log(chen); 
+        }
+        prison(); //"undefined" 匹配prison
+    }
+    superchen();
+
+<b>全局变量和window对象</b>
+
+- 浏览器的顶层对象是window对象
+- 在node.js中的顶层对象是global对象
+
+window对象包含了很多属性，包括对象、方法（onload/onresize/alert/close...），DOM元素以及其他变量。所有这些属性使用语法window.property来访问。
+
+当在浏览器中的JavaScript检查全局变量是否存在时，它是在window对象上查找的。
+
+    var global = "Global chen"; 
+    console.log(global);                   //"Global chen"
+    console.log(window.global);            //"Global chen"
+    console.log(global === window.global)  //true
+
+<b>JavaScript对象和原型链</b>
+
+基于原型的对象创建：
+
+- 定义原型对象
+- 定义对象的构造函数
+- 将构造函数关联到原型
+- 实例化对象
+
+---
+    //step 1
+    var proto = {
+        highschool:3,
+        collage:4
+    };
+
+    //step 2
+    var Student = function(name,id){
+        this.name = name;
+        this.id = id;
+    };
+
+    //step 3
+    Student.prototype = proto;
+
+    //step 4
+    var firstStudent = new Student("Chen","123");
+    var secondStudent = new Student("Zhao","456");
+
+<b>使用Object.create替代new创建对象</b>
+
+JavaScript使用了new操作符，违背了基于原型的核心思想，使用Object.create创建JavaScript对象，会比较接近基于原型的思想。
+
+    var proto = {
+        highschool:3,
+        collage:4
+    };
+
+    var firstStudent = Object.create(proto);
+    firstStudent.name = "Chen";
+    firstStudent.id = "123";
+
+    var secondStudent = Object.create(proto);
+    secondStudent.name = "zZhao";
+    secondStudent.id = "456";
+    
+使用Object.create的常见模式是使用工厂函数来创建并返回最终的对象。
+
+    var proto = {
+        highschool:3,
+        collage:4
+    };
+
+    var makeStudent() = function(){
+        var student = Object.create(proto);
+        student.name = name;
+        student.id = id;
+
+        return student;
+    };
+
+    var firstStudent = makeStudent("Chen","123");
+
+    var secondStudent = makeStudent("Zhao","456");
+
+<b>在老式浏览器上的Object.create</b>
+
+Object.create在IE9+/Firefox4+/Safari5+/Chrome5+中有效。
+
+实现老版本浏览器的兼容方法：
+
+    var objectCreate = function(arg){
+        if(!arg){ return {}; }
+            function obj(){};
+            obj.prototype = arg;
+            return new obj;
+    };
+    Object.create = Object.create ||objectCreate;
+
+<b>原型链</b>
+
+JavaScript使用原型链来解析属性值。原型链描述了JavaScript引擎如何从对象查找到原型以及原型的原型，来定位对象的属性。
+
+- 当请求对象的属性时，JavaScript引擎首先直接在该对象中查找。
+- 如果找不到该属性，则查找原型（保存在对象的_proto_属性中），查看原型是否包含了请求的属性。
+- 如果JavaScript在对象的原型上找不到该属性，它就查找原型的原型。
+- 当JavaScript达到通用的Object的原型，原型链就结束了。
+- 如果JavaScript在原型链上的所有地方都找不到请求的属性，则返回undefined。
+
+<b>更改原型</b>
+
+原型继承能够使得所有基于原型的对象即可发生变化。如果更改原型对象，那么所有之前和之后创建的对象都会是更改后的值。
+
+
+<b>自执行匿名函数</b>
+
+显式调用和自执行函数的对比（作用相同，都是创建一个函数然后立即调用它）：
+
+- 显式调用
+
+        var foo = function(){
+            //do something
+        };
+        foo();
+
+- 自执行函数
+
+        ( function() {
+            //do something
+        })();
+
+自执行匿名函数被用来控制作用域，阻止变量泄露到代码中的其他地方。
+
+自执行函数传递参数的方法：
+
+    (function(weather){
+
+        var todayWeather = "Today is " + weather;
+        console.log(todayWeather); //输出"Today is sunny"
+
+    })("sunny"); // 值sunny传递给匿名函数的第一个参数weather
+
+一个很著名的组织变量被覆盖的例子为jQuery，其中jQuery和$变量是彼此别名。
+
+    (function($){
+        console.log($);
+    })(jQuery);
+
+    //在函数的作用域里，$是jQuery对象。
+
+<b>闭包</b>
+
+闭包是阻止垃圾回收器将变量从内存中移除的方法，使得在创建变量的执行环境的外面能够访问到该变量。
+
+> 垃圾回收器，指的是当代码不再需要时，就从电脑的内存中把它移除的自动化系统。
