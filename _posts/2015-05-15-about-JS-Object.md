@@ -276,8 +276,87 @@ JavaScript使用原型链来解析属性值。原型链描述了JavaScript引擎
 
     //在函数的作用域里，$是jQuery对象。
 
+<b>模块模式</b>
+
+模块模式可以将私有变量引入JavaScript，每个模块都有它们自己的私有变量。
+
+    var school = (function(){
+        var student_name = "Chen",
+            collage_year = "4 years";
+        return {
+            student: student_name + " study " + collage_year,
+            study_term: collage_year
+        };
+    })();
+    
+    console.log(school.student_name);  //"undefined"
+    console.log(school.student);       //"Chen study 4 years"
+    console.log(school.study_term);    //"4 years"
+
+在全局作用域中只添加了school变量，匿名函数的返回值保存在变量school中。
+一旦自执行匿名函数停止执行，在它里面定义的变量将移除，因此无法更新它们。
+
+为了更新它们，必须将属性转变为方法，每次调用它们时都会访问变量。
+
+    var school = (function(){
+        var student_name = "Chen",
+            collage_year = "4 years";
+
+        //返回一个有两个方法的对象
+        return {
+
+            //每次调用student()时，都会重新查找student_name，collage_year。
+            student: function(){
+                student_name + " study " + collage_year;
+            },
+            //每次调用setstudyTerm()时，都会查找并设置study_term。
+            setStudyTerm: function(trem){
+                study_term = term;
+            }
+        };  
+    })();
+
+    console.log(school.student());     //"Chen study 4 years"
+    
+    school.setStudyTerm("finished");
+    console.log(school.student());     //"Chen study finished"
+
 <b>闭包</b>
 
 闭包是阻止垃圾回收器将变量从内存中移除的方法，使得在创建变量的执行环境的外面能够访问到该变量。
 
 > 垃圾回收器，指的是当代码不再需要时，就从电脑的内存中把它移除的自动化系统。
+
+例1
+
+    var reportWeather = function(weather){
+        return function(){
+            return weather;
+        }
+    };
+    
+    var sunnyWeather = reportWeather("sunny"); //"sunny"
+    var rainyWeather = reportWeather("rainy"); //"rainy"
+
+例2
+
+    var student = {
+        name : "Chen",
+        who: function(){
+            return this.name;
+        }
+    };
+
+    student.who(); //"Chen"
+
+清除保存的执行环境对象的唯一方法(除了关闭网页)：删除变量。
+
+---
+
+##后记
+
+笔记大部分知识点摘自于[《单页web应用》](http://book.douban.com/subject/25986284/)
+
+这本书是我目前见过有关于解释JavaScript面向对象相关知识的最通俗易懂的书籍，所以摘抄了其中的精华部分进行记录。
+
+后续有新的发现会继续补充这篇笔记内容。
