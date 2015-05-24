@@ -50,18 +50,21 @@ featured_image: /images/JavaScriptDOM.jpg
 
 <b>分离</b>
 
->    - 使用(X)HTML去搭建文档的结构
+>
+- 使用(X)HTML去搭建文档的结构
 - 使用CSS去设置文档的呈现效果
 - 使用DOM脚本去实现文档的行为
 
 <b>使用CSS还是DOM?</b>
 
->    - 选择这个问题最简单的解决方案
+> 
+- 选择这个问题最简单的解决方案
 - 选择会得到更多浏览器的支持的解决方案
 
 [nodeType常用值]
 
->   - <span>元素节点</span> nodeType属性为为 <span>1<span>
+>   
+- <span>元素节点</span> nodeType属性为为 <span>1<span>
 - <span>属性节点</span> nodeType属性为为 <span>2<span>
 - <span>文本节点</span> nodeType属性为为 <span>3<span>
 

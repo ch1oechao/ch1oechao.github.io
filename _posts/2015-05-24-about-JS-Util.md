@@ -40,7 +40,7 @@ featured_image: /images/js.jpg
 
 <b>基础原生JavaScript方法</b>
 
-Document Ready 事件
+[Document Ready 事件]
 
 在不使用jQuery的情况下，大多数时候想到的第一个方法是<code>window.onload</code>
 
@@ -70,6 +70,8 @@ Document Ready 事件
 
 <b>选择器API</b>
 
+[querySelector]
+
 querySelector是个很好的选择，但是为了兼容，在Util.js写$()方法的时候用的都是最最最初始的document.getElementsBy...之类的。
 
 在这里把用querySelector写的简单$()贴上来，以备以后不用兼容老IE的时刻~
@@ -92,18 +94,20 @@ querySelector是个很好的选择，但是为了兼容，在Util.js写$()方法
 
 基于querySelector一些优势，就可以放大招了:
 
-> 原作者：Andrew Lunny 
 > 
-> [[文章出处]](https://remysharp.com/2013/04/19/i-know-jquery-now-what#backToTheFutureToday-heading
+原作者：Andrew Lunny 
+>
+文章出处：https://remysharp.com/2013/04/19/i-know-jquery-now-what#backToTheFutureToday-heading
 
-    //This gives us simple dollar function and event binding
-    //给DOM元素绑定事件
-    var $ = document.querySelectorAll.bind(document);
-    Element.prototype.on = Element.prototype.addEventListener;
-    
-    //This is how you use it
-    //然后可以这么用
-    $(".element")[0].on("touchstart", handleTouch, false);
+        
+        //This gives us simple dollar function and event binding
+        //给DOM元素绑定事件
+        var $ = document.querySelectorAll.bind(document);
+        Element.prototype.on = Element.prototype.addEventListener;
+        
+        //This is how you use it
+        //然后可以这么用
+        $(".element")[0].on("touchstart", handleTouch, false);
 
 基于之前写的Util.js，还可以这么用:
 
@@ -126,7 +130,7 @@ querySelector是个很好的选择，但是为了兼容，在Util.js写$()方法
     //给元素添加样式：(新样式字符串前面必须有空格)
     ele.className += " anotherClass" 
 
-    //自己写的addClass()封装方法
+    //DOM操作艺术中介绍的addClass()封装方法 放在Util.js用了
     function addClass(element,value) {
         //判断className属性是否为空
         if(!element.className) {
@@ -166,22 +170,28 @@ querySelector是个很好的选择，但是为了兼容，在Util.js写$()方法
 
 但是兼容方面只支持 IE10+,Chrome,FireFox,Opera和Safari 等版本较新的浏览器。
 
-    //可以先判断浏览器是否支持classList：
+
+    // 可以先判断浏览器是否支持classList：
     if ("classList" in document.documentElement) {
       // classList is supported, now do something with it
     }
 
-    //用classList来添加、删除、转换类：
+    // 用classList来添加、删除、转换类：
+
     // Adding a class
     element.classList.add("bar");
+
     // Removing a class
     element.classList.remove("foo");
+
     // Checking if has a class
     element.classList.contains("foo");
+
     // Toggle a class
     element.classList.toggle("active");
 
     //封装方法就可以简单得多(className要求为字符串)
+
     function addClass(element, className){
        element.classList.add(className); 
     }
@@ -197,7 +207,8 @@ querySelector是个很好的选择，但是为了兼容，在Util.js写$()方法
 
 <b>DOM操作</b>
 
-cloneNode 节点克隆
+[cloneNode] 节点克隆
+
 >	
  【作　　用】建立指定节点的复制。
 >
