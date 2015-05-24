@@ -2,7 +2,7 @@
 layout: post
 title:  "Nice to meet U :)"
 date:  2015-05-01
-categories: BrandNew
+categories: new_start
 featured_image: /images/cover.jpg
 ---
 
