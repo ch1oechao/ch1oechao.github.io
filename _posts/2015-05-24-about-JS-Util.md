@@ -92,9 +92,9 @@ querySelector是个很好的选择，但是为了兼容，在Util.js写$()方法
 
 基于querySelector一些优势，就可以放大招了:
 
-> 原作者：Andrew Lunny [[文章出处]](https://remysharp.com/2013/04/19/i-know-jquery-now-what#backToTheFutureToday-heading)
-
-
+> 原作者：Andrew Lunny 
+> 
+> [[文章出处]](https://remysharp.com/2013/04/19/i-know-jquery-now-what#backToTheFutureToday-heading
 
     //This gives us simple dollar function and event binding
     //给DOM元素绑定事件

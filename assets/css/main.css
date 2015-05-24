@@ -424,7 +424,7 @@ article a:link,a:visited {
 }
 
 article a:hover,a:active {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 article b{

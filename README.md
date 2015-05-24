@@ -1,5 +1,7 @@
 #Hello World & Let's start form GitHub :)
 
+[[博客访问地址]](http://www.chen9.info/)
+
 ###前言
 
 > "Hello World"
