@@ -2,7 +2,7 @@
 layout: post
 title:  "JavaScript DOM Note"
 date:  2015-05-07
-categories: Books_of_code
+categories: JavaScript
 featured_image: /images/JavaScriptDOM.jpg
 
 ---

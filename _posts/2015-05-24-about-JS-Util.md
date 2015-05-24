@@ -15,7 +15,7 @@ featured_image: /images/js.jpg
 
 最近看到一些关于将原生JS的好文章，因此开个坑，记录笔记~
 
-####笔记出处
+####笔记出处：
 
 [[抛弃jQuery，深入原生的JavaScript]](http://ourjs.com/detail/535556a1ed9add0e26000002)
 
@@ -72,11 +72,11 @@ featured_image: /images/js.jpg
 
 [querySelector]
 
-querySelector是个很好的选择，但是为了兼容，在Util.js写$()方法的时候用的都是最最最初始的document.getElementsBy...之类的。
+<code>querySelector</code>是个很好的选择，但是为了兼容，在Util.js写$()方法的时候用的都是最最最初始的document.getElementsBy...之类的。
 
-在这里把用querySelector写的简单$()贴上来，以备以后不用兼容老IE的时刻~
+在这里把用<code>querySelector</code>写的简单<code>$()</code>贴上来，以备以后不用兼容老IE的时刻~
 
-实现$()封装方法获取元素：
+实现<code>$()</code>封装方法获取元素：
 
     var ele = $("div");
 
@@ -84,15 +84,15 @@ querySelector是个很好的选择，但是为了兼容，在Util.js写$()方法
 
     var ele = docuemnt.getElementsByTagName("div");
 
-使用querySelector：
+使用<code>querySelector</code>：
 
     var ele = document.querySelector("div");
 
-扩展querySelectorAll:
+扩展<code>querySelectorAll</code>:
 
     var eles = document.querySelectorAll(".class div"); //获取.class下所有div
 
-基于querySelector一些优势，就可以放大招了:
+基于<code>querySelector</code>一些优势，就可以放大招了:
 
 > 
 原作者：Andrew Lunny 
@@ -119,7 +119,7 @@ querySelector是个很好的选择，但是为了兼容，在Util.js写$()方法
 
 <b>添加和删除样式名（classname)</b>
 
-添加和删除className的时候会遇到坑
+添加和删除<code>className</code>的时候会遇到坑
 
     //给元素设置样式：
     ele.className = "classname";
@@ -145,9 +145,7 @@ querySelector是个很好的选择，但是为了兼容，在Util.js写$()方法
         }
     }
 
-但是一个元素存在多个className，想移除其中一个className就要费些功夫了：
-
-自己写的removeClass(ele,className)是简单粗暴的全部移除className...
+但是一个元素存在多个<code>className</code>，想移除其中一个<code>className</code>就要费些功夫了：
 
 这是大神写的：
 
@@ -166,7 +164,7 @@ querySelector是个很好的选择，但是为了兼容，在Util.js写$()方法
 
     //事实证明学好正则表达式多么重要...自己写了好几行的遍历，大神一行代码搞定 = = 
 
-好消息是HTML5的 classList API 可以更好地操作className
+好消息是HTML5的 <code>classList API</code> 可以更好地操作<code>className</code>
 
 但是兼容方面只支持 IE10+,Chrome,FireFox,Opera和Safari 等版本较新的浏览器。
 
@@ -241,7 +239,7 @@ querySelector是个很好的选择，但是为了兼容，在Util.js写$()方法
 
 目前并没有实际运用到，所以贴上原文：
 
->这是我最爱的之一，且如果你需要用JavaScript操作流体图片时这非常有用。由于浏览器默认返回当前被调整过大小的图片，我们必须要想一些其它的办法。幸运的是，现代浏览器目前已有解决的方案了：
+>这是我最爱的之一，且如果你需要用<code>JavaScript</code>操作流体图片时这非常有用。由于浏览器默认返回当前被调整过大小的图片，我们必须要想一些其它的办法。幸运的是，现代浏览器目前已有解决的方案了：
 
 ><code>var maxWidth = img.naturalWidth;</code>
 这将会给我们提供最大宽度100%像素的图片，且IE9,Chrome,Firefox,Safari和Opera都支持这个方法。我们也可以保留这个特性然后通过加载图片到内存中添加老浏览器的支持：
@@ -289,7 +287,7 @@ querySelector是个很好的选择，但是为了兼容，在Util.js写$()方法
       );
     }
 
->上面的函数可以在给窗体添加一个”滚动”事件监听器，然后调用isInViewport()方法时使用。
+>上面的函数可以在给窗体添加一个”滚动”事件监听器，然后调用<code>isInViewport()</code>方法时使用。
 
 
 <b>后记</b>

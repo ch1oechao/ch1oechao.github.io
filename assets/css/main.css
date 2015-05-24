@@ -118,6 +118,7 @@ header {
 @media (max-width: 960px) {
   header {
     width: 100%;
+    min-width: 767px;
   }
   header {
     height: auto;
@@ -322,7 +323,6 @@ header ul.meta li span {
   color: rgba(255, 255, 255, .5);
 }
 
-
 /* Pagination */
 
 @media screen and (min-width: 961px){
@@ -433,6 +433,15 @@ article b{
   margin: 15px 0;
   font-weight: 600;
   color: #CE2323;
+}
+
+article code{
+  background-color: #FAEDED;
+  border-radius: 3px;
+  padding: 1px 5px;
+  margin: 0 3px;
+  color: #CE2323;
+  font-family: "consolas",arial,sans-serif;
 }
 
 article time{
@@ -834,7 +843,7 @@ span{
 
     font-size: 15px; 
     line-height: 20px; 
-    font-family: 'Mircosoft Yahei','consolas',arial, Serif;
+    font-family: 'consolas',arial, sans-serif;
     padding: 15px;
 
     margin-top: 10px;
