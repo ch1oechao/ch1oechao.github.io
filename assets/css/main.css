@@ -424,7 +424,7 @@ article a:link,a:visited {
 }
 
 article a:hover,a:active {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 article b{
@@ -839,6 +839,7 @@ span{
 
     margin-top: 10px;
     margin-bottom: 20px; 
+    border-radius: 9px;
 
     clear: both; /* 清除左右浮动 */
     width: 96%; /* 必须定义宽度 */ 

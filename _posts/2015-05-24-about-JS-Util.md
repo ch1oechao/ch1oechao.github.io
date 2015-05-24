@@ -40,7 +40,7 @@ featured_image: /images/js.jpg
 
 <b>基础原生JavaScript方法</b>
 
-- Document Ready 事件
+Document Ready 事件
 
 在不使用jQuery的情况下，大多数时候想到的第一个方法是<code>window.onload</code>
 
@@ -94,12 +94,14 @@ querySelector是个很好的选择，但是为了兼容，在Util.js写$()方法
 
 > 原作者：Andrew Lunny [[文章出处]](https://remysharp.com/2013/04/19/i-know-jquery-now-what#backToTheFutureToday-heading)
 
-    // This gives us simple dollar function and event binding
+
+
+    //This gives us simple dollar function and event binding
     //给DOM元素绑定事件
     var $ = document.querySelectorAll.bind(document);
     Element.prototype.on = Element.prototype.addEventListener;
     
-    // This is how you use it
+    //This is how you use it
     //然后可以这么用
     $(".element")[0].on("touchstart", handleTouch, false);
 
