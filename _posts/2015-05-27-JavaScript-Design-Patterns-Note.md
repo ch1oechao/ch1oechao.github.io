@@ -9,7 +9,7 @@ featured_image: /images/JavaScriptDesignPatterns.jpg
 
 ###《JavaScript Design Patterns》 笔记摘抄
 
-这本书的中文翻译版已在图书馆借到，另外我找到了这本书原文的[[电子在线版]](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+这本书的中文翻译版已在图书馆借到，另外MARK了这本书原文的[[电子在线版]](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 笔记摘抄将以原版为主，结合两个版本的知识点一起记录~
 
@@ -260,9 +260,9 @@ JavaScript虽然不支持类的概念，但却支持特殊的构造方法来使�
         };
     })();
     
-    console.log(school.student_name);  //"undefined"
-    console.log(school.student);       //"Chen study 4 years"
-    console.log(school.study_term);    //"4 years"
+    console.log(school.student_name);  // "undefined"
+    console.log(school.student);       // "Chen study 4 years"
+    console.log(school.study_term);    // "4 years"
 
 在全局作用域中只添加了school变量，匿名函数的返回值保存在变量school中。
 一旦自执行匿名函数停止执行，在它里面定义的变量将移除，因此无法更新它们。
@@ -271,14 +271,14 @@ JavaScript虽然不支持类的概念，但却支持特殊的构造方法来使�
 
     var school = (function(){
         var student_name = "Chen",
-            collage_year = "4 years";
+            study_term = "4 years";
 
         //返回一个有两个方法的对象
         return {
 
             //每次调用student()时，都会重新查找student_name，collage_year
             student: function(){
-                student_name + " study " + collage_year;
+                student_name + " study " + study_term;
             },
             //每次调用setstudyTerm()时，都会查找并设置study_term
             setStudyTerm: function(trem){
@@ -340,7 +340,7 @@ When a subject needs to notify observers about something interesting happening, 
 >
 模拟具体实例可能拥有的一系列观察者：
 
-    // 创建一系列观察者
+    // 创建一系列观察对象
     function ObserverList(){
       this.observerList = [];
     }
@@ -352,13 +352,13 @@ When a subject needs to notify observers about something interesting happening, 
     ObserverList.prototype.count = function(){
       return this.observerList.length;
     };
-    // 获取指定地标的观察对象
+    // 获取指定索引的观察对象
     ObserverList.prototype.get = function( index ){
       if( index > -1 && index < this.observerList.length ){
         return this.observerList[ index ];
       }
     };
-    // 查找指定观察对象的位置
+    // 查找指定观察对象的索引
     ObserverList.prototype.indexOf = function( obj, startIndex ){
       var i = startIndex;
      
@@ -399,6 +399,17 @@ When a subject needs to notify observers about something interesting happening, 
       }
     };
 
+>We then define a skeleton for creating new Observers. The update functionality here will be overwritten later with custom behaviour.
+
+当我们创建了一个新的观察者，update方法将会在稍后进行重写。
+
+    // The Observer
+    function Observer(){
+      this.update = function(){
+        // ...
+      };
+    }
+
 >In our sample application using the above Observer components, we now define:
 
 > 
@@ -416,7 +427,7 @@ When a subject needs to notify observers about something interesting happening, 
 
 HTML:
 
-    // 按钮-添加新观察者的确认项
+    // 按钮-添加新的确认项
     <button id="addNewObserver">Add New Observer checkbox</button>
 
     // 确认项
@@ -428,7 +439,7 @@ HTML:
 Sample script:
 
     // Extend an object with an extension
-    // 对对象进行扩展
+    // 对对象进行扩展继承
     function extend( extension, obj ) {
         for ( var key in extension ) {
             obj[key] = extension[key];
@@ -445,7 +456,7 @@ Sample script:
     // Concrete Subject
     // 具体主体
     // Extend the controlling checkbox with the Subject class
-    // 给按钮扩展主体方法
+    // 让确认项继承主体方法
     extend( new Subject(), controlCheckbox );
      
     // Clicking the checkbox will trigger notifications to its observers
@@ -466,11 +477,11 @@ Sample script:
         check.type = "checkbox";
      
         // Extend the checkbox with the Observer class
-        // 扩展确认项的观察者
+        // 使新的确认项继承观察者构造方法
         extend( new Observer(), check );
      
         // Override with custom update behaviour
-        // 确认项更新值
+        // 重写构造方法update，确认项更新值
         check.update = function( value ){
             this.checked = value;
         };
