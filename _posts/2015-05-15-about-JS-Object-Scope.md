@@ -146,3 +146,38 @@ window对象包含了很多属性，包括对象、方法（onload/onresize/aler
     console.log(window.global);            //"Global chen"
     console.log(global === window.global)  //true
 
+<b>自执行匿名函数</b>
+
+显式调用和自执行函数的对比（作用相同，都是创建一个函数然后立即调用它）：
+
+- 显式调用
+
+        var foo = function(){
+            //do something
+        };
+        foo();
+
+- 自执行函数
+
+        ( function() {
+            //do something
+        })();
+
+自执行匿名函数被用来控制作用域，阻止变量泄露到代码中的其他地方。
+
+自执行函数传递参数的方法：
+
+    (function(weather){
+
+        var todayWeather = "Today is " + weather;
+        console.log(todayWeather); //输出"Today is sunny"
+
+    })("sunny"); // 值sunny传递给匿名函数的第一个参数weather
+
+一个很著名的组织变量被覆盖的例子为jQuery，其中jQuery和$变量是彼此别名。
+
+    (function($){
+        console.log($);
+    })(jQuery);
+
+    //在函数的作用域里，$是jQuery对象。

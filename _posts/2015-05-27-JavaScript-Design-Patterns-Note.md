@@ -249,29 +249,48 @@ JavaScript虽然不支持类的概念，但却支持特殊的构造方法来使�
 
 由于闭包，使得函数内的变量和方法只能在函数内引用，而返回的对象方法可以在全局使用。
 
-书上举得例子都太复杂了，因此我自己写了一个小例子来说明模块模式：
+书上举得例子都太复杂了，因此自己写了一个小例子来说明模块模式：
 
-    var myModule = (function(){
-    
-        var myName = "zchen9"; 
-        var myAge = 21;
-    
-        // 通过公有接口getName()和getAge()可以访问到私有变量
+    var school = (function(){
+        var student_name = "Chen",
+            collage_year = "4 years";
         return {
-            getName: function(){
-                return myName;
+            student: student_name + " study " + collage_year,
+            study_term: collage_year
+        };
+    })();
+    
+    console.log(school.student_name);  //"undefined"
+    console.log(school.student);       //"Chen study 4 years"
+    console.log(school.study_term);    //"4 years"
+
+在全局作用域中只添加了school变量，匿名函数的返回值保存在变量school中。
+一旦自执行匿名函数停止执行，在它里面定义的变量将移除，因此无法更新它们。
+
+为了更新它们，必须将属性转变为方法，每次调用它们时都会访问变量。
+
+    var school = (function(){
+        var student_name = "Chen",
+            collage_year = "4 years";
+
+        //返回一个有两个方法的对象
+        return {
+
+            //每次调用student()时，都会重新查找student_name，collage_year
+            student: function(){
+                student_name + " study " + collage_year;
             },
-            getAge: function(){
-                return myAge;
+            //每次调用setstudyTerm()时，都会查找并设置study_term
+            setStudyTerm: function(trem){
+                study_term = term;
             }
-        };        
+        };  
     })();
 
-    // console:
-    myModule.getAge()
-    // 输出21
-    myModule.getName()
-    // 输出"zchen9"
+    console.log(school.student());     //"Chen study 4 years"
+    
+    school.setStudyTerm("finished");
+    console.log(school.student());     //"Chen study finished"
 
 Advantages [ 优点 ]
 
