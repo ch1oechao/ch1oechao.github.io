@@ -43,6 +43,19 @@ $(document).ready(function(){
         $("html,body").animate({scrollTop: 0},500)
     });
 
+    //分类菜单显示
+    $("#cateShow").bind("click",function(){
+        if($(".cate-content").css("display") == "none"){
+            $(".cate-content").show(400);
+        }else{
+            $(".cate-content").hide(400);
+        }
+        
+    });
+    $(".container").click(function(){
+        $(".cate-content").hide(400);
+    });
+
 });
 
 function scrollDown(){

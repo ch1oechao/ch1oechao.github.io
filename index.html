@@ -28,6 +28,20 @@ layout: default
 
 </header>
 <article>
+    <section class="cate-menu">
+        <div class="cate-content">
+            <h3>[ Category ]</h3>
+            <ul>
+                <li>All<span>{{site.categories | size}}</span></li>
+                {% for category in site.categories %}
+                <li>
+                    {{ category | first }}<span>{{ category | last | size }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a id="cateShow"></a>
+    </section>
     <div class="container">
         <ul class="posts">
             {% for post in site.posts %}

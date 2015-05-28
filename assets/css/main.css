@@ -77,7 +77,7 @@ blockquote {
 /* Header & Article */
 
 header,
-article {
+article{
     display: inline-block;
     vertical-align: top;
     height: 100%;
@@ -384,11 +384,82 @@ header ul.meta li span {
 
 article {
     width: 65%;
+    margin-left: -3px;
+    margin-top: -5px;
     overflow-x: hidden;
     text-align: justify;
     text-justify: inter-ideograph;
 }
 
+.cate-menu{
+    position: relative;
+    width: 101%;
+    box-shadow: 0 2px 5px #666;
+    color: #333;
+}
+.cate-content{
+    padding: 20px 0;
+    display: none;
+}
+
+.cate-content h3{
+    margin: 0;
+    line-height: 2.4em;
+    color: #CE2323;
+    text-align: center;
+}
+.cate-content li{
+    list-style: none;
+    display: block;
+    padding: 6px 25px;
+    border-radius: 5px;
+    margin: 10px 18%;
+    line-height: 1em;
+
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -o-transition: all 300ms;
+
+    cursor: pointer;
+}
+.cate-content li:hover{
+    background-color: #CE2323;
+    color: #FFF;
+}
+.cate-content li:hover > span{
+    color: #FFF;
+}
+
+.cate-content li > span{
+    float: right;
+}
+
+#cateShow {
+    position: absolute;
+    right: 25px;
+    bottom: -40px;
+    width:32px;
+    height: 40px;
+    color: #FFF;
+
+    background-image: url(../../images/stars.png);
+    _background-image: url(../../images/stars.png);
+
+    overflow:hidden;
+    background-repeat:no-repeat;
+    background-position:0 0;
+    transition:bottom 0.9s;
+    -webkit-transition:bottom 0.9s;
+    -moz-transition:bottom 0.9s;
+    -o-transition:bottom 0.9s;
+
+    cursor: pointer;
+}
+
+#cateShow:hover {
+    background-position:0 -40px;
+}
 article .container {
     padding-top: 80px;
 }
@@ -837,7 +908,7 @@ article .post-comment{
 
 ul.posts li {
     list-style: none;
-    margin: 0 2em 50px;
+    margin: 0 2em 45px;
 
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
