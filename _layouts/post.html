@@ -2,69 +2,61 @@
 layout: default
 ---
 <header style="background-image: url({{ site.baseurl }}{{ page.featured_image }});">
-  <div class="container post-container">
-    <a href="{{ site.baseurl }}/" class="home_button"></a>
-    <div class="inner-container">
-      <h1>{{ page.title }}</h1>
-      <ul class="meta">
-        <li>
-          <span>
-            Published
-          </span>
-          {{ page.date | date_to_string }}
-        </li>
-        <li>
-          <span>
-            Category
-          </span>
-          {{ page.categories }}
-        </li>
-      </ul>      
+    <div class="container post-container">
+        <a href="{{ site.baseurl }}/" class="home_button"></a>
+        <div class="inner-container">
+            <h1>{{ page.title }}</h1>
+            <ul class="meta">
+                <li>
+                    <span>Published</span>
+                  {{ page.date | date_to_string }}
+                </li>
+                <li>
+                    <span>Category</span>
+                    {{ page.categories }}
+                </li>
+            </ul>      
+        </div>
+        <ul class="pagination">
+            {% if page.previous.url %}
+            <li class="previous">
+                <a href="{{ site.baseurl }}{{ page.previous.url }}">Previous</a>
+            </li>
+            {% endif %}
+            {% if page.next.url %}
+            <li class="next">
+                <a href="{{ site.baseurl }}{{ page.next.url }}">Next</a>
+            </li>
+            {% endif %}
+        </ul>
     </div>
-    <ul class="pagination">
-      {% if page.previous.url %}
-        <li class="previous">
-          <a href="{{ site.baseurl }}{{ page.previous.url }}">
-            Previous
-          </a>
-        </li>
-      {% endif %}
-      {% if page.next.url %}
-      <li class="next">
-        <a href="{{ site.baseurl }}{{ page.next.url }}">
-          Next
-        </a>
-      </li>
-      {% endif %}
-    </ul>
-  </div>
 </header>
 
 <article>
-  <div class="container">
+    <div class="container">
 
-    {{ content }}
-  
-    <div class="post-comment">
-      <span>Comments</span>
-      <!-- 多说评论框 start -->
-      <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="zchen9.github.io{{ page.url }}"></div>
-      <!-- 多说评论框 end -->
+        {{ content }}
+
+        <div class="post-comment">
+            <span>Comments</span>
+            <!-- 多说评论框 start -->
+            <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="zchen9.github.io{{ page.url }}"></div>
+            <!-- 多说评论框 end -->
+        </div>
     </div>
-  </div>
-  <a id="returnTop"></a> 
+    <a id="returnTop"></a> 
 </article>
 
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
-var duoshuoQuery = {short_name:"zchen9"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
+    var duoshuoQuery = {short_name:"zchen9"};
+        (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
   </script>
 <!-- 多说公共JS代码 end -->

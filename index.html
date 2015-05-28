@@ -3,79 +3,85 @@ layout: default
 ---
 
 <header id="home-header" style="background-image: url({{ site.baseurl }}{{ site.sidebar_image }});">
-  <a class="list_button" id="info_buttom"><i class="fa fa-puzzle-piece"></i></a>
-  <div class="container">
-    <h1>{{ site.title }}</h1>
-    <ul class="meta">
-      <li>
-        <span>
-          {{ site.tagline }}
-        </span>
-      </li>
-  </div>
+    <a class="list_button" id="info_buttom"><i class="fa fa-puzzle-piece"></i></a>
+    <div class="container">
+        <h1>{{ site.title }}</h1>
+        <ul class="meta">
+            <li>
+                <span>
+                {{ site.tagline }}
+                </span>
+            </li>
+        </ul>
+    </div>
 
-  <div class="info" id="myinfo">
-    <span>A Sky Full of Stars</span>
-    <i class="fa fa-music" id="audioplay">
-    	<audio controls="controls" id="audioControl">
-		  <source src="http://7xic0o.com1.z0.glb.clouddn.com/zchen9A Sky Full of Stars.ogg" type="audio/ogg" />
-		  <source src="http://7xic0o.com1.z0.glb.clouddn.com/zchen9A Sky Full of Stars.mp3" type="audio/mpeg" />
-		</audio>
-    </i>
-    <span>&copy; 2015 zchen9</span>
-  </div>
+    <div class="info" id="myinfo">
+        <span>A Sky Full of Stars</span>
+        <i class="fa fa-music" id="audioplay">
+            <audio controls="controls" id="audioControl">
+                <source src="http://7xic0o.com1.z0.glb.clouddn.com/zchen9A Sky Full of Stars.ogg" type="audio/ogg" />
+                <source src="http://7xic0o.com1.z0.glb.clouddn.com/zchen9A Sky Full of Stars.mp3" type="audio/mpeg" />
+            </audio>
+        </i>
+        <span>&copy; 2015 zchen9</span>
+    </div>
 
 </header>
 <article>
-  <div class="container">
-    <ul class="posts">
-      {% for post in site.posts %}
-        <li>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-          	<h2>{{ post.title }}</h2>
-          	<span class="meta">
-            	{{ post.date | date_to_string }}
-          	</span>
-          	{{ post.excerpt }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-  <a id="returnTop"></a> 
+    <div class="container">
+        <ul class="posts">
+            {% for post in site.posts %}
+            <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                    <h2>{{ post.title }}</h2>
+                    <span class="meta">
+                    {{ post.date | date_to_string }}
+                    </span>
+                    {{ post.excerpt }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <a id="returnTop"></a> 
 </article>
 
 <div class="info_page" id="info-warp">
-	<a class="home_button" id="home_btn"></a>
-	<div class="info_menu">
-		<ul id="list_menu">
-			<li id="list_info" class="active"><i class="fa fa-user"></i>Info</li>
-			<li id="list_contact"><i class="fa fa-tty"></i>Contact</li>
-			<li id="list_about"><i class="fa fa-cube"></i>About</li>
-		</ul>
-	</div>
-	<div class="info_content">
-		<article>
-			<div class="icon_chen"></div>
-			<div class="info_me">
-				<h1>Hello, I'm Chen.</h1>
-				<p>在校本科生一枚，网络工程专业，2016年毕业，目前学习前端以及准备考研中。</p>
-				<p>热衷前端，爱好设计，喜欢摄影。</p>
-				<p>日常爱听音乐，纯音乐、欧美、日韩,风格不限~
-					利用一切空闲时间看美剧 >_<，正在追的剧有《权力的游戏》,《天蝎》等~
-					是一个经常伪装学霸的学渣一枚 (～￣▽￣)～
-				</p>
-				<p>有以上共同爱好者，欢迎打扰~</p>
-			</div>
-			<div class="contact_me">
-				<!-- <p><span>Contact me , if you're interested~</span></p> -->
-				<div class="list_icon">
-				<a href="https://github.com/zchen9" target="_blank" class="github_button"></a>
-				<a href="mailto:zhao.zchen9@gmail.com" class="mail_button"></a>
-				<a href="http://sighttp.qq.com/authd?IDKEY=75e77b7cdf51cde5d2396922c37353bf5a18ee3dcbd38fd3"  target="_blank" class="qq_button"></a>
-				<a href="http://weibo.com/yoho92" target="_blank" class="weibo_button"></a>
-				</div>
-			</div>
-		</article>
-	</div>
+    <a class="home_button" id="home_btn"></a>
+    <div class="info_menu">
+        <ul id="list_menu">
+            <li id="list_info" class="active"><i class="fa fa-user"></i>Info</li>
+            <li id="list_contact"><i class="fa fa-tty"></i>Contact</li>
+            <li id="list_about"><i class="fa fa-cube"></i>About</li>
+        </ul>
+    </div>
+    <div class="info_content">
+        <article>
+            <div class="icon_chen"></div>
+            <div class="info_me">
+                <h1>Hello, I'm Chen.</h1>
+                <p>在校本科生，网络工程专业，2016年毕业，目前学习前端以及准备考研中。</p>
+                <p>热衷前端，爱好设计，喜欢摄影。</p>
+                <p>日常爱听音乐，目前最爱的专辑是SHINee的《Odd》, FTIsland《I Will》以及Coldplay的《Ghost Stories》;
+                    会利用一切空闲时间看美剧 >_<，正在追的剧有《权力的游戏》,《天蝎》,《神盾局特工》等。
+                </p>
+                <p>总的来说是经常伪装学霸的学渣一只 (～￣▽￣)～欢迎有共同爱好者打扰~</p>
+            </div>
+            <div class="contact_me">
+                <p><span>Contact me , if you're interested~</span></p>
+                <div class="list_icon">
+                <a href="https://github.com/zchen9" target="_blank" class="github_button"></a>
+                <a href="mailto:zhao.zchen9@gmail.com" class="mail_button"></a>
+                <a href="http://sighttp.qq.com/authd?IDKEY=75e77b7cdf51cde5d2396922c37353bf5a18ee3dcbd38fd3"  target="_blank" class="qq_button"></a>
+                <a href="http://weibo.com/yoho92" target="_blank" class="weibo_button"></a>
+                </div>
+            </div>
+            <div class="about_here">
+                <p>If you like here, just go to <a href="https://github.com/zchen9/zchen9.github.io" target="_blank"> [ zchen9'github ] </a> and give me a star ~</p>
+                <p>or Go to <a href="http://www.chen9.info/new_start/2015/05/01/nice-to-meet-U.html"> [ the first post ] </a> and leave me a message ヾ(^▽^*)))</p>
+                <p>Powered By Github &amp; jekyll &amp; 多说</p>
+                <p>&copy;2015  zchen9</p>
+            </div>
+        </article>
+    </div>
 </div>
