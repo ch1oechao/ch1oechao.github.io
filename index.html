@@ -30,12 +30,12 @@ layout: default
 <article>
     <section class="cate-menu">
         <div class="cate-content">
-            <h3>[ Category ]</h3>
+            <h3>[ CATEGORY ]</h3>
             <ul>
-                <li>All<span>{{site.categories | size}}</span></li>
+                <li>[ all ]<span>{{site.categories | size}}</span></li>
                 {% for category in site.categories %}
                 <li>
-                    {{ category | first }}<span>{{ category | last | size }}</span>
+                    [ {{ category | first }} ]<span>{{ category | last | size }}</span>
                 </li>
                 {% endfor %}
             </ul>
@@ -48,10 +48,9 @@ layout: default
             <li>
                 <a href="{{ site.baseurl }}{{ post.url }}">
                     <h2>{{ post.title }}</h2>
-                    <span class="meta">
-                    {{ post.date | date_to_string }}
-                    </span>
+                    <span class="date">{{ post.date | date_to_string }}</span>
                     {{ post.excerpt }}
+                    
                 </a>
             </li>
             {% endfor %}
