@@ -1,4 +1,4 @@
-#Hello World & Let's start form GitHub :)
+#Hello World & Let's start from GitHub :)
 
 [[博客访问地址]](http://www.chen9.info/)
 
@@ -10,7 +10,7 @@
 
 它带领我进入了一个奇妙又精彩的编程世界
 
-> "Let's start form GitHub"
+> "Let's start from GitHub"
 
 这是我开始学会使用GitHub并且想要搭建一个博客时想到的第一句话
 

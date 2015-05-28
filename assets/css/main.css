@@ -55,10 +55,14 @@ h3{
 }
 
 blockquote {
-    border-left: 5px solid #ddd;
-    margin: 0 .5em;
-    padding-left: 10px;
+    border-left: 6px solid #ddd;
+    padding: 2px 10px 0 20px;
+    margin: 10px 0;
     color: #666;
+    clear: both; /* 清除左右浮动 */
+    width: 96%; /* 必须定义宽度 */ 
+    word-break: break-word; /* 文本行的任意字内断开 */ 
+    word-wrap: break-word; /* IE */ 
 }
 
 @media (max-width: 960px) {
@@ -427,10 +431,21 @@ article a:hover,a:active {
     text-decoration: none;
 }
 
+article h2{
+    margin: 20px 0;
+}
+
 article b{
     display: block;
-    font-size: 1.1em;
+    font-size: 1em;
     margin: 15px 0;
+    font-weight: 600;
+    color: #CE2323;
+}
+article h4{
+    display: block;
+    font-size: 1.2em;
+    margin: 20px 0;
     font-weight: 600;
     color: #CE2323;
 }

@@ -13,13 +13,13 @@ featured_image: /images/JavaScriptDOM.jpg
 
 <b>渐进增强(progressive enhancement)</b>
 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;渐进增强原则基于这样一种思想：你应该总是从最核心的部分，也就是从内容开始。
+> 渐进增强原则基于这样一种思想：你应该总是从最核心的部分，也就是从内容开始。
 应该根据内容使用标记良好的结构；然后再逐步加强这些内容。
 这些增强工作既可以是通过CSS改进呈现效果，也可以是通过DOM添加各种行为。
 
 <b>平稳退化</b>
 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+> 
 渐进增强的实现必然支持平稳退化。
 如果你按照渐进增强的原则去充实内容，你为内容添加的样式和行为就自然支持平稳退化。
 那些缺乏必要的CSS和DOM支持的访问者仍可以访问到你的核心内容。
@@ -30,20 +30,20 @@ featured_image: /images/JavaScriptDOM.jpg
 
 - <span>[ 结构层 structural layer ]</span>
 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+>
 结构层由HTML或XHTML之类的标记语言负责创建。
 标签(tag) 对网页内容的语义做出了描述。
 使用有意义的标签来构建页面的结构。
     
 - <span>[ 表示层 presentation layer ]
     
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+>
 表示层由CSS完成。CSS描述页面内容应该如何呈现。
 把表现性的信息都分离到CSS样式表中。
     
 - <span>[ 行为层 behavior layer ]</span>
     
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+>
 行为层负责内容应该如何响应事件这一问题。这是JavaScript和DOM主宰的领域。
 负责任地使用不唐突的JavaScript来应用行为增强，同时确保平稳退化。
 
@@ -64,9 +64,9 @@ featured_image: /images/JavaScriptDOM.jpg
 [nodeType常用值]
 
 >   
-- <span>元素节点</span> nodeType属性为为 <span>1<span>
-- <span>属性节点</span> nodeType属性为为 <span>2<span>
-- <span>文本节点</span> nodeType属性为为 <span>3<span>
+- <span>元素节点</span> nodeType属性为 <span>1<span>
+- <span>属性节点</span> nodeType属性为 <span>2<span>
+- <span>文本节点</span> nodeType属性为 <span>3<span>
 
 
     

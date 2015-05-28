@@ -15,7 +15,7 @@ featured_image: /images/JavaScriptDesignPatterns.jpg
 
 ---
 
-##What is a Pattern? [ 什么是模式 ]
+## What is a Pattern? [ 什么是模式 ]
 
 >A pattern is a reusable solution that can be applied to commonly occurring problems in software design - in our case - in writing JavaScript web applications. 
 
@@ -29,7 +29,7 @@ featured_image: /images/JavaScriptDesignPatterns.jpg
 
 ##JavaScript Design Patterns [ JavaScript设计模式 ]
 
-<b>The Constructor Pattern  [ 构造器模式 ]</b>
+####The Constructor Pattern  [ 构造器模式 ]
 
 >Object constructors are used to create specific types of objects - both preparing the object for use and accepting arguments which a constructor can use to set the values of member properties and methods when the object is first created.
 
@@ -229,7 +229,7 @@ JavaScript虽然不支持类的概念，但却支持特殊的构造方法来使�
 对象字面量不需要使用<code>new</code>创建实例对象，对象所有属性将包裹在<code>{}</code>定义，在<code>{}</code>之外需要添加新的对象属性值，可以使用<code>myObjectLiteral.newPropertyName = "newValue"</code>创建。
 
 
-<b>The Module Pattern [ 模块模式 ] </b>
+####The Module Pattern [ 模块模式 ]
 
 >In JavaScript, the Module pattern is used to further emulate the concept of classes in such a way that we're able to include both public/private methods and variables inside a single object, thus shielding particular parts from the global scope. What this results in is a reduction in the likelihood of our function names conflicting with other functions defined in additional scripts on the page.
 
@@ -312,7 +312,7 @@ Disadvantages [ 缺点 ]
 
 私有模式使得开发者很难扩展其中的私有方法，灵活性差。
 
-<b>The Observer Pattern [ 观察者模式 ]</b>
+####The Observer Pattern [ 观察者模式 ]
 
 >The Observer is a design pattern where an object (known as a subject) maintains a list of objects depending on it (observers), automatically notifying them of any changes to state.
 >
