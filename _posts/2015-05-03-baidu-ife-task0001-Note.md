@@ -2,7 +2,7 @@
 layout: post
 title:  "Baidu-ife Task0001 Note"
 date:  2015-05-02
-categories: baidu-ife
+categories: css
 featured_image: /images/baidu-ife.jpg
 ---
 

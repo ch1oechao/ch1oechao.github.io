@@ -57,20 +57,13 @@ $(document).ready(function(){
     });
 
     //菜单点击
+    $(".cates").hide();
     $(".cate-list li").bind("click",function(){
         var cateName = $(this).attr("data-cate");
         $(".cate-content").hide(400);
-        if(cateName == "all"){
-            $(".container > ul").slideDown(400);
-        }
-        else{
-            $(".container>ul[data-cate != "+cateName+"]").slideUp(280);
-            $(".container>ul[data-cate = "+cateName+"]").slideDown(400);
-        }
+        $(".container>ul[data-cate != "+cateName+"]").slideUp(280);
+        $(".container>ul[data-cate = "+cateName+"]").slideDown(400);
     });
-
-    
-
 });
 
 function scrollDown(){

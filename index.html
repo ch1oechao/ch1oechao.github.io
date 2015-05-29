@@ -43,8 +43,20 @@ layout: default
         <a id="cateShow"></a>
     </section>
     <div class="container">
+        <ul class="posts" data-cate="all">
+            {% for post in site.posts %}
+            <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                  <h2>{{ post.title }}</h2>
+                  <span class="date">{{ post.date | date_to_string }}</span>
+                  {{ post.excerpt }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        <!-- 分类菜单内容 -->
         {% for category in site.categories %}
-        <ul class="posts" data-cate="{{category | first}}">
+        <ul class="posts cates" data-cate="{{category | first}}">
             {% for posts in category  %}
             {% for post in posts %}
             {% if post.url %}
@@ -53,7 +65,6 @@ layout: default
                     <h2>{{ post.title }}</h2>
                     <span class="date">{{ post.date | date_to_string }}</span>
                     {{ post.excerpt }}
-                    
                 </a>
             </li>
             {% endif %}
