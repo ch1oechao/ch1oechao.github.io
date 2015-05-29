@@ -32,8 +32,8 @@ $(document).ready(function(){
     $(".cate-list li").bind("click",function(){
         var cateName = $(this).attr("data-cate");
         $(".cate-content").hide(400);
-        $(".container>ul[data-cate != "+cateName+"]").slideUp(280);
-        $(".container>ul[data-cate = "+cateName+"]").slideDown(400);
+        $(".cate-posts > ul[data-cate != "+cateName+"]").slideUp(280);
+        $(".cate-posts > ul[data-cate = "+cateName+"]").slideDown(400);
     });
 
     //音乐播放
