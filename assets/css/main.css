@@ -427,7 +427,7 @@ article {
     cursor: pointer;
 }
 .cate-content li:hover{
-    background-color: #FCC;
+    background-color: #CE2323;
     color: #FFF;
 }
 .cate-content li:hover > span{
@@ -441,7 +441,7 @@ article {
     line-height: 1.3em;
     text-align: center;
     border-radius: 11px;
-    background-color: #FCC;
+    background-color: #CE2323;
     color: #FFF;
 }
 
@@ -741,6 +741,9 @@ article .post-comment{
 .contact_me{
     position: absolute;
     bottom: 0;
+    width: 80%;
+    text-align: center;
+
     margin-left: 50%;
     transform:translateX(-50%);
     -o-transform:translateX(-50%);
@@ -753,23 +756,14 @@ article .post-comment{
     -o-transition: all 1s linear;
     transition: all 1s linear;
 }
+
 .contact_show{
-    bottom: 180px;
+    bottom: 135px;
     opacity: 1;
 
     -webkit-transition: all 1s linear;
     -o-transition: all 1s linear;
     transition: all 1s linear;
-}
-
-.contact_me span {
-    display: block;
-
-    margin-bottom: 30px;
-    font-size: 18px;
-    font-weight: 600;
-
-    text-align: center;
 }
 
 .list_icon {
@@ -778,7 +772,7 @@ article .post-comment{
     margin: 0 auto;
 }
 
-.contact_me a{
+.list_icon a{
     float: left;
     display: block;
 
@@ -795,7 +789,7 @@ article .post-comment{
     filter: invert(.5);
 
 }
-.contact_me a:hover{
+.list_icon a:hover{
     -webkit-filter:invert(.9);
     -moz-filter:invert(.9);
     -ms-filter:invert(.9);
@@ -827,6 +821,12 @@ article .post-comment{
 
 .about_here a{
     cursor: pointer;
+}
+
+.about_here b{
+    font-size: 1.2em;
+    font-weight: 600;
+    color: inherit;
 }
 
 .about_show{

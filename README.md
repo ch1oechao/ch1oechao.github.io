@@ -61,6 +61,12 @@
 - 将原生JS换成了jQuery，加载速度快了很多~~
 - 增加返回顶部的功能~
 
+####2015.05.29
+
+- 增加分类菜单功能~
+- 感谢[Gaohaoyang](https://github.com/Gaohaoyang)对博客搭建的指点~
+- 添加友链啦~
+
 ---
 
 ###So Far
