@@ -66,6 +66,7 @@
 - 增加分类菜单功能~
 - 感谢[Gaohaoyang](https://github.com/Gaohaoyang)对博客搭建的指点~
 - 添加友链啦~
+- 用网易云音乐的外链更新了音乐播放模块
 
 ---
 

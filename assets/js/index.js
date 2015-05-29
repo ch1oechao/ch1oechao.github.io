@@ -1,32 +1,6 @@
 $(document).ready(function(){
 
-    $("#list_info").bind("click",function(){
-        $("#list_info").addClass("active");
-        $("#list_contact,#list_about").removeClass("active");
-
-        $(".info_me").addClass("info_show");
-        $(".contact_me").removeClass("contact_show");
-        $(".about_here").removeClass("about_show");
-    });
-
-    $("#list_contact").bind("click",function(){
-        $("#list_contact").addClass("active");
-        $("#list_info,#list_about").removeClass("active");
-
-        $(".contact_me").addClass("contact_show");
-        $(".info_me").removeClass("info_show");
-        $(".about_here").removeClass("about_show");
-    });
-
-    $("#list_about").bind("click",function(){
-        $("#list_about").addClass("active");
-        $("#list_info,#list_contact").removeClass("active");
-
-        $(".about_here").addClass("about_show");
-        $(".contact_me").removeClass("contact_show");
-        $(".info_me").removeClass("info_show");
-    });
-
+    //个人信息模块按钮
     $("#info_buttom").bind("click",scrollDown);
     $("#home_btn").bind("click",scrollUp);
 
@@ -52,9 +26,6 @@ $(document).ready(function(){
         }
         
     });
-    $(".container").click(function(){
-        $(".cate-content").hide(400);
-    });
 
     //菜单点击
     $(".cates").hide();
@@ -63,6 +34,51 @@ $(document).ready(function(){
         $(".cate-content").hide(400);
         $(".container>ul[data-cate != "+cateName+"]").slideUp(280);
         $(".container>ul[data-cate = "+cateName+"]").slideDown(400);
+    });
+
+    //音乐播放
+    $(".fa-music").bind("click",function(){
+        event.stopPropagation(); 
+        $(".fa-music").toggleClass("fa-spin");
+        $("#audioplay").fadeToggle(400,"linear");
+    });
+
+
+    $("header,.container").bind("click",function(){
+        //菜单隐藏
+        $(".cate-content").hide(400);
+        //音乐播放器隐藏
+        $(".fa-music").removeClass("fa-spin");
+        $("#audioplay").fadeOut(400);
+    })
+
+
+    // 信息切换
+    $("#list_info").bind("click",function(){
+        $("#list_info").addClass("active");
+        $("#list_contact,#list_about").removeClass("active");
+
+        $(".info_me").addClass("info_show");
+        $(".contact_me").removeClass("contact_show");
+        $(".about_here").removeClass("about_show");
+    });
+
+    $("#list_contact").bind("click",function(){
+        $("#list_contact").addClass("active");
+        $("#list_info,#list_about").removeClass("active");
+
+        $(".contact_me").addClass("contact_show");
+        $(".info_me").removeClass("info_show");
+        $(".about_here").removeClass("about_show");
+    });
+
+    $("#list_about").bind("click",function(){
+        $("#list_about").addClass("active");
+        $("#list_info,#list_contact").removeClass("active");
+
+        $(".about_here").addClass("about_show");
+        $(".contact_me").removeClass("contact_show");
+        $(".info_me").removeClass("info_show");
     });
 });
 
