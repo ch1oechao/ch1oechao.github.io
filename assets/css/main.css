@@ -715,7 +715,7 @@ article .post-comment{
 }
 
 .info_show {
-    top: 240px;
+    top: 220px;
     text-indent: 2em;
     opacity: 1;
     -webkit-transition: all 1s linear;
@@ -735,7 +735,7 @@ article .post-comment{
 
 .contact_me{
     position: absolute;
-    bottom: 0;
+    top: 200px;
     width: 80%;
     text-align: center;
 
@@ -753,7 +753,7 @@ article .post-comment{
 }
 
 .contact_show{
-    bottom: 135px;
+    top: 330px;
     opacity: 1;
 
     -webkit-transition: all 1s linear;
