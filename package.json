@@ -1,0 +1,19 @@
+{
+  "name": "zchen9.github.io",
+  "version": "1.0.0",
+  "description": "Hey, friends ~ Here is my blog ☞  [[Nice Shot !]](http://www.chen9.info/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zchen9/zchen9.github.io.git"
+  },
+  "author": "zchen9 (zhao.zchen9@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zchen9/zchen9.github.io/issues"
+  },
+  "homepage": "https://github.com/zchen9/zchen9.github.io",
+}
