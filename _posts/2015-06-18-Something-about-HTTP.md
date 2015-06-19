@@ -183,11 +183,11 @@ WebSocket 即Web浏览器与Web服务器之间全双工通信标准。WebSocket 
 SQL注入(SQL Injection)是指针对Web应用使用的数据库，通过运行非法的SQL语句而产生的攻击。该安全隐患有可能引发极大的威胁，有时会直接导致个人信息及机密信息的泄露。
 
 参考资料： [[ 专题：SQL注入攻击与防御 ]](http://netsecurity.51cto.com/art/201108/287651.htm)
-
-
-
-
+　
+　
+　
+　
 ---
 
-完
+END.
 

@@ -50,8 +50,14 @@ h2 {
 h3{
     margin-bottom: 15px;
     margin-top: 15px;
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 600;
+}
+
+h4, h5, h6{
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 16px 0 10px;
 }
 
 blockquote {
@@ -976,7 +982,7 @@ ul.posts p {
     margin-top: 10px;
     margin-bottom: 20px; 
     border-radius: 9px;
-    border: 2px dashed #FF9D95;
+    border: 1px dashed #FF8E8E;
     background-color: #FFFCFA;
 
     clear: both; /* 清除左右浮动 */
