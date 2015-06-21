@@ -7,7 +7,7 @@ featured_image: /images/html5.jpg
 
 ---
 
-### 关于 HTML5 & 移动Web开发 学习笔记
+### 关于 HTML5 & 移动Web开发 笔记摘抄
 
 ####学习HTML5的一些网站
 - [[ HTML5 Doctor ]](http://html5doctor.com/)

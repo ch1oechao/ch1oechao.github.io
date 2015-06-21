@@ -3,19 +3,18 @@ layout: post
 title:  "JavaScript Design Patterns Note"
 date:  2015-05-27
 categories: JavaScript
-featured_image: /images/JavaScriptDesignPatterns.jpg
+featured_image: /images/js.jpg
 
 ---
 
-###《JavaScript Design Patterns》 笔记摘抄
+### 关于JavaScript设计模式的笔记摘抄
 
-这本书的中文翻译版已在图书馆借到，另外MARK了这本书原文的[[电子在线版]](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+- 《JavaScript Design Patterns》[[英文在线版]](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
-笔记摘抄将以原版为主，结合两个版本的知识点一起记录~
 
 ---
 
-## What is a Pattern? [ 什么是模式 ]
+#### What is a Pattern? [ 什么是模式 ]
 
 >A pattern is a reusable solution that can be applied to commonly occurring problems in software design - in our case - in writing JavaScript web applications. 
 
@@ -499,6 +498,6 @@ Sample script:
 
 ---
 
-###╮(╯▽╰)╭
+####未完待续...
 
-待更新...
+╮(╯▽╰)╭
