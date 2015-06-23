@@ -6,8 +6,8 @@ sidebar_image: /images/cover.jpg
 
 # Build settings
 encoding: UTF-8
-#markdown: kramdown
-markdown: redcarpet
-highlighter: pygments
-#highlighter: true
+markdown: kramdown
+#markdown: redcarpet
+#highlighter: pygments
+highlighter: true
 baseurl: # the subpath of your site, e.g. /blog/
