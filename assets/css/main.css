@@ -14,7 +14,7 @@ body {
 
 body {
     overflow-x: hidden;
-    font-family: 'Bitter','Microsoft YaHei',arial,serif;
+    font-family: 'Bitter', 'Heiti SC', 'Microsoft YaHei', sans-serif;
     font-size: 16px;
     line-height: 28px;
     color: #222;
@@ -24,13 +24,13 @@ body {
 
 .fa {
     margin-right: 10px;
-} 
+}
 
 /* Type */
 
 h1,
 h2 {
-    font-family: 'Open Sans','Microsoft YaHei',arial,sans-serif;
+    font-family: 'Open Sans', 'Heiti SC', 'Microsoft YaHei', sans-serif;
 }
 
 h1 {
@@ -66,9 +66,9 @@ blockquote {
     margin: 10px 0;
     color: #666;
     clear: both; /* 清除左右浮动 */
-    width: 96%; /* 必须定义宽度 */ 
-    word-break: break-word; /* 文本行的任意字内断开 */ 
-    word-wrap: break-word; /* IE */ 
+    width: 96%; /* 必须定义宽度 */
+    word-break: break-word; /* 文本行的任意字内断开 */
+    word-wrap: break-word; /* IE */
 }
 
 @media (max-width: 960px) {
@@ -336,14 +336,14 @@ header ul.meta li span {
         right: 10px;
         bottom: 10px;
         left: 10px;
-    }  
+    }
 }
 
 @media screen and (max-width: 960px){
     .pagination {
         margin-top: 40px;
         padding: 0 10px;
-    }  
+    }
 }
 
 .pagination:after {
@@ -367,7 +367,7 @@ header ul.meta li span {
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     line-height: 40px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', 'Heiti SC', sans-serif;
     font-size: 12px;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.5);
@@ -538,7 +538,7 @@ article code{
     padding: 1px 5px;
     margin: 0 3px;
     color: #CE2323;
-    font-family: "consolas",arial,sans-serif;
+    font-family: "consolas", 'Heiti SC', sans-serif;
 }
 
 article time{
@@ -549,7 +549,7 @@ article time{
 }
 
 section {
-    font-family: 'Microsoft YaHei',arial,serif;
+    font-family: 'Heiti SC', 'Microsoft YaHei', sans-serif;
 }
 
 article h3{
@@ -963,7 +963,7 @@ ul.posts p {
     width: 18%;
 }
 
-.table li > span{ 
+.table li > span{
     float: left;
     display: block;
     width: 82%;
@@ -971,24 +971,24 @@ ul.posts p {
 }
 
 /*highlight*/
-.hljs { 
+.hljs {
     overflow: hidden;
 
-    font-size: 15px; 
-    line-height: 20px; 
-    font-family: 'consolas',arial, sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    font-family: 'consolas', 'Heiti SC', sans-serif;
     padding: 15px;
 
     margin-top: 10px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     border-radius: 9px;
     border: 1px dashed #FF8E8E;
     background-color: #FFFCFA;
 
     clear: both; /* 清除左右浮动 */
-    width: 96%; /* 必须定义宽度 */ 
-    word-break: break-word; /* 文本行的任意字内断开 */ 
-    word-wrap: break-word; /* IE */ 
+    width: 96%; /* 必须定义宽度 */
+    word-break: break-word; /* 文本行的任意字内断开 */
+    word-wrap: break-word; /* IE */
 }
 
 /*comment*/
@@ -1006,7 +1006,7 @@ ul.posts p {
     background: none !important;
 }
 
-.ds-thread .ds-avatar img { 
+.ds-thread .ds-avatar img {
     margin-top: 12% !important;
     margin-left: 6% !important;
     width: 60px !important;
@@ -1016,7 +1016,7 @@ ul.posts p {
     box-shadow: 3px 2px 1px #CE2323 !important;
 }
 
-.ds-post-self .ds-avatar img { 
+.ds-post-self .ds-avatar img {
     margin-top: 12% !important;
     margin-left: 20% !important;
 }
