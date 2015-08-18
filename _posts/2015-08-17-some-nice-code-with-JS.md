@@ -8,8 +8,7 @@ featured_image: /images/js.jpg
 ---
 
 ### JS中一些建议写法
- 
----
+
    
 主要收集了 [[参考规范]](https://github.com/ecomfe/spec/blob/master/javascript-style-guide.md) 一些常用到的 更规范 更优雅JavaScript代码 ~
 
