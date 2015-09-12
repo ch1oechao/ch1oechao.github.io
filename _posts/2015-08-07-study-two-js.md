@@ -42,7 +42,7 @@ Two.js 是一个对面现代Web浏览器的二维绘图API，它可以提供多�
 	<script>
 		var el = document.getElementById("main");
 			two = new Two({
-				fullscrenn: true
+				fullscreen: true
 			});
 		two.appendTo(el);
 	</script>

@@ -697,7 +697,7 @@ article .post-comment{
 }
 
 .icon_chen {
-    margin-top: 70px;
+    margin-top: 88px;
     margin-left: 50%;
     transform:translateX(-50%);
     -o-transform:translateX(-50%);
@@ -708,35 +708,35 @@ article .post-comment{
     width: 160px;
     height: 160px;
     border-radius: 160px;
-    background-image: url("../../images/icon_zchen9.png");
+    background-image: url("../../images/icon_zchen9.jpg");
 }
 
 
 .info_me {
     position: absolute;
     top: 0;
-    margin: 50px 100px 0;
+    width: 97%;
+    text-align: center;
     text-indent: 2em;
     opacity: 0;
 
-    -webkit-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
+    -webkit-transition: all 1.2s linear;
+    -o-transition: all 1.2s linear;
+    transition: all 1.2s linear;
 }
 
 .info_show {
-    top: 220px;
+    top: 46%;
     text-indent: 2em;
     opacity: 1;
-    -webkit-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
+    -webkit-transition: all 1.2s linear;
+    -o-transition: all 1.2s linear;
+    transition: all 1.2s linear;
 }
 
 .info_me h1{
     margin: 20px 0;
     font-size: 20px;
-    text-align: left;
 }
 
 .info_me p {
@@ -763,7 +763,7 @@ article .post-comment{
 }
 
 .contact_show{
-    top: 330px;
+    top: 48%;
     opacity: 1;
 
     -webkit-transition: all 1s linear;
