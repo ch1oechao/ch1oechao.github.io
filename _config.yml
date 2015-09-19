@@ -1,13 +1,23 @@
 # Site settings
 title: 'Nice Shot'  # Your Title
-tagline: 'To find something interesting '  # A brief tagline for your site
+tagline: 'To find something interesting'  # A brief tagline for your site
 sidebar_image: /images/cover.jpg
+timezone: 'Asia/Shanghai'
+destination: ./_site
 
 
 # Build settings
 encoding: UTF-8
 markdown: kramdown
-#markdown: redcarpet
-#highlighter: pygments
-highlighter: true
+#for publish
+highlighter: pygments
+#for local
+#highlighter: true
 baseurl: # the subpath of your site, e.g. /blog/
+codeurl: /code/
+abouturl: /about/
+fragmenturl: /fragment/
+
+#page
+paginate: 5
+paginate_path: "code/page:num"

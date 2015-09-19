@@ -1,0 +1,13 @@
+<section class="cate-menu">
+  <div class="cate-content">
+    <h3>[ CATEGORY ]</h3>
+    <ul class="cate-list">
+      {% for category in site.categories %}
+      <li data-cate="{{ category | first }}">
+        [ {{ category | first }} ] <span>{{ category | last | size }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <a id="cateShow"></a>
+</section>
