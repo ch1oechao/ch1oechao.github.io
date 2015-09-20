@@ -17,6 +17,7 @@ baseurl: # the subpath of your site, e.g. /blog/
 codeurl: /code/
 abouturl: /about/
 fragmenturl: /fragment/
+permalink: /:year/:month/:day/:title
 
 #page
 paginate: 7

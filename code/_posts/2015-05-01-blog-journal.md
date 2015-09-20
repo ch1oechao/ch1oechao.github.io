@@ -66,6 +66,7 @@ featured_image: /images/cover.jpg
 - 对CSS和JS以及JPG进行压缩处理
 - 采用七牛云存储，优化网站部分图片加载，另附 [[ 图片优化好文 ]](http://www.cnblogs.com/wizcabbit/p/web-image-optimization.html)
 - 适配移动设备
+- 添加 [[ GoogleAnalytics ]](https://www.google.com/analytics/)
 
  
 ---
