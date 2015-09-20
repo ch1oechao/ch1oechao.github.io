@@ -1,0 +1,72 @@
+.fragment{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+
+  background-image: url(//7xic0o.com1.z0.glb.clouddn.com/fragbg.jpg);
+
+  .list_button {
+    z-index: 1;
+  }
+}
+
+.frag-container {
+  width: 100%;
+  padding-top: 100px;
+  vertical-align: middle;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  article {
+    text-align: center;
+  }
+  b {
+    color: #CE2323;
+  }
+}
+
+.frag-content {
+  width: 100%;
+  padding: 10px 15%;
+  p {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+}
+
+@media (max-width: 768px) {
+  .frag-content {
+    padding: 10px 10%;
+  }
+  .frag-container {
+    padding: 120px 3% 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .frag {
+    font-size: .9em;
+  }
+  .frag-content {
+    padding: 10px 5%;
+  }
+}

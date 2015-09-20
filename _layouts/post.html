@@ -4,12 +4,12 @@ layout: default
 
 {% include header.html %}
 
-<article>
-  <div class="container article">
+<article class="post-body">
+  <div class="container">
 
     {{ content }}
 
-    {% include comment.html %}
   </div>
   {% include return.html %}
+  {% include comment.html %}
 </article>

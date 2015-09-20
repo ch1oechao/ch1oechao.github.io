@@ -19,5 +19,5 @@ abouturl: /about/
 fragmenturl: /fragment/
 
 #page
-paginate: 5
+paginate: 7
 paginate_path: "code/page:num"

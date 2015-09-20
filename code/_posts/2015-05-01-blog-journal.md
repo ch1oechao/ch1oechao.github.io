@@ -63,7 +63,9 @@ featured_image: /images/cover.jpg
 - 将评论插件由[[多说]](http://duoshuo.com/)说换成[[Disqus]](https://disqus.com/)
 - 使用SASS重构CSS代码
 - 调整页面结构，模块化布局
-- 对CSS和JS进行压缩处理
+- 对CSS和JS以及JPG进行压缩处理
+- 采用七牛云存储，优化网站部分图片加载，另附 [[ 图片优化好文 ]](http://www.cnblogs.com/wizcabbit/p/web-image-optimization.html)
+- 适配移动设备
 
  
 ---

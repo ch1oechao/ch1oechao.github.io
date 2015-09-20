@@ -3,3 +3,4 @@ _site
 .idea
 .DS_Store
 _sass/*.map
+_sass/*.css

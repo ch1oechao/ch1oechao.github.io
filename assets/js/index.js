@@ -1,20 +1,19 @@
 $(document).ready(function(){
 
-    //个人信息模块按钮
-    $("#info_buttom").bind("click",scrollDown);
-    $("#home_btn").bind("click",scrollUp);
-
-
     // 回到顶部
     $("article").scroll(function(){     
-        $("article").scrollTop()>$("header").height()? $("#returnTop").css("bottom","80px"):$("#returnTop").css("bottom","-200px");
+        $("article").scrollTop() > $("header").height()
+          ? $("#returnTop").css("bottom", "80px")
+          : $("#returnTop").css("bottom", "-200px");
     });
     $(window).scroll(function(){
-        $(window).scrollTop()>$("article").height()? $("#returnTop").css("bottom","80px"):$("#returnTop").css("bottom","-200px");
+        $(window).scrollTop() > $("header").height()
+          ? $("#returnTop").css("bottom", "80px")
+          : $("#returnTop").css("bottom", "-200px");
     });
     $("#returnTop").bind("click",function(){
-        $("article").animate({scrollTop: 0},500),
-        $("html,body").animate({scrollTop: 0},500)
+        $("article").animate({scrollTop: 0}, 500);
+        $("html,body").animate({scrollTop: 0}, 500);
     });
 
     //分类菜单显示
@@ -24,7 +23,6 @@ $(document).ready(function(){
         }else{
             $(".cate-content").hide(400);
         }
-        
     });
 
     //菜单点击
@@ -36,78 +34,36 @@ $(document).ready(function(){
         $(".cate-posts > ul[data-cate = "+cateName+"]").slideDown(400);
     });
 
-    //音乐播放
-    $(".fa-music").bind("click",function(){
-        event.stopPropagation(); 
-        $(".fa-music").toggleClass("fa-spin");
-        $("#audioplay").fadeToggle(400,"linear");
-    });
-
 
     $("header,.container").bind("click",function(){
         //菜单隐藏
         $(".cate-content").hide(400);
-        //音乐播放器隐藏
-        $(".fa-music").removeClass("fa-spin");
-        $("#audioplay").fadeOut(400);
-    })
-
-
-    // 信息切换
-    $("#list_info").bind("click",function(){
-        $("#list_info").addClass("active");
-        $("#list_contact,#list_about").removeClass("active");
-
-        $(".info_me").addClass("info_show");
-        $(".contact_me").removeClass("contact_show");
-        $(".about_here").removeClass("about_show");
     });
 
-    $("#list_contact").bind("click",function(){
-        $("#list_contact").addClass("active");
-        $("#list_info,#list_about").removeClass("active");
-
-        $(".contact_me").addClass("contact_show");
-        $(".info_me").removeClass("info_show");
-        $(".about_here").removeClass("about_show");
+    //音乐点击
+    var isDisplay = false;
+    $(".music-icon").bind("click", function() {
+      if (!isDisplay) {
+        $(".music-icon").css({
+          top: -60 + 'px'
+        });
+        $(".fa-music").addClass("fa-spin active");
+        $(".music-box").css({
+          top: -40,
+          opacity: 100
+        });
+      }
+      else {
+        $(".music-icon").css({
+          top: 30 + 'px'
+        });
+        $(".fa-music").removeClass("fa-spin active");
+        $(".music-box").css({
+          top: 50 + 'px',
+          opacity: 0
+        });
+      }
+      isDisplay = !isDisplay;
     });
 
-    $("#list_about").bind("click",function(){
-        $("#list_about").addClass("active");
-        $("#list_info,#list_contact").removeClass("active");
-
-        $(".about_here").addClass("about_show");
-        $(".contact_me").removeClass("contact_show");
-        $(".info_me").removeClass("info_show");
-    });
 });
-
-function scrollDown(){
-    if($("#info-warp")){
-        $("#info-warp").css({
-            top: 0 + "px",
-            width: 100 + "%",
-            height: 100 + "%",
-            opacity: 1,
-            zIndex: 9999
-        });
-
-        $("#list_info").addClass("active");
-        $(".info_me").addClass("info_show");
-    }
-}
-
-function scrollUp(){
-    if($("#info-warp")){
-        $("#info-warp").css({
-            top: -$("html,body").height() +"px",
-            opacity: 0,
-            zIndex: -1
-        });
-    }
-
-    $("#list_info,#list_contact,#list_about").removeClass("active");
-    $(".info_me").removeClass("info_show");
-    $(".contact_me").removeClass("contact_show");
-    $(".about_here").removeClass("about_show");
-}

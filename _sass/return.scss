@@ -1,0 +1,32 @@
+#returnTop {
+  position: fixed;
+  right: 25px;
+  bottom: -200px;
+  width:36px;
+  height:65px;
+  color: #FFF;
+
+  background-image: url(//7xic0o.com1.z0.glb.clouddn.com/top.png);
+  _background-image: url(//7xic0o.com1.z0.glb.clouddn.com/top.png);
+
+  overflow:hidden;
+  background-repeat:no-repeat;
+  background-position:0 0;
+  transition:bottom 0.9s;
+  -webkit-transition:bottom 0.9s;
+  -moz-transition:bottom 0.9s;
+  -o-transition:bottom 0.9s;
+
+  cursor: pointer;
+
+  &:hover {
+    background-position:0 -65px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #returnTop {
+    position: fixed;
+    right: 9px;
+  }
+}

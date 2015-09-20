@@ -1,0 +1,56 @@
+.about {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+
+  background-image: url(//7xic0o.com1.z0.glb.clouddn.com/aboutbg.jpg);
+
+  .list_button {
+    z-index: 1;
+  }
+}
+
+.about-container {
+  vertical-align: middle;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .7);
+  article {
+    text-align: center;
+  }
+  b {
+    color: #CE2323;
+  }
+}
+
+@media (max-width: 960px) {
+  .about-container{
+    padding: 0 3%;
+  }
+}

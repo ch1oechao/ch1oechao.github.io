@@ -1,0 +1,63 @@
+//global
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  overflow-x: hidden;
+  font-family: 'Bitter', 'Lantinghei SC', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #222;
+  font-weight: 400;
+  white-space: nowrap;
+}
+//font-awesome
+.fa {
+  margin-right: 10px;
+}
+//title
+h1,
+h2,
+h3 {
+  font-family: 'Open Sans', 'Lantinghei SC', 'Microsoft YaHei', sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 1.3;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+h3{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+h4, h5, h6{
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a:link,a:visited {
+  color: #CE2323;
+  text-decoration: none;
+}
+
+a:hover,a:active {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 960px) {
+  h1 {
+    font-size: 34px;
+  }
+}

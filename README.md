@@ -12,7 +12,7 @@ Hope you can enjoy it :)
 
 - **For Blog**
 
-    You can go to [my first post](http://www.chen9.info/new_start/2015/05/01/nice-to-meet-U.html), leave  a message for me or exchange link with me.
+    You can go to [[ Fragment ]](http://www.chen9.info/fragment/), leave  a message for me or exchange link with me.
 
     And you can give me a **star** for this repository !~ ヽ(✿ﾟ▽ﾟ)ノ
 

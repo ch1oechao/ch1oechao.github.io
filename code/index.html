@@ -1,7 +1,7 @@
 ---
 layout: default 
 ---
-<header id="home-header" style="background-image: url({{ site.baseurl }}{{ site.sidebar_image }});">
+<header class="home-header" style="background-image: url({{ site.baseurl }}{{ site.sidebar_image }});">
   <a class="list_button" href="/">
     <i class="fa fa-puzzle-piece"></i>
   </a>
@@ -15,7 +15,7 @@ layout: default
   </div>
   {% include pagination.html %}
 </header>
-<article>
+<article class="home-body">
   {% include cate.html %}
   <div class="container cate-posts">
     <ul class="posts" data-cate="all">

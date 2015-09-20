@@ -1,0 +1,78 @@
+.info {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  flex-flow: column;
+
+  position: relative;
+  transform: translateY(20%);
+
+  h2 {
+    margin: 8px 0;
+  }
+}
+.icon_chen {
+  margin-top: 8%;
+  margin-left: 50%;
+  margin-bottom: 15px;
+  transform:translateX(-50%);
+  -o-transform:translateX(-50%);
+  -ms-transform:translateX(-50%);
+  -moz-transform:translateX(-50%);
+  -webkit-transform:translateX(-50%);
+
+  cursor: pointer;
+  width: 160px;
+  height: 160px;
+  border-radius: 160px;
+  background-image: url(//7xic0o.com1.z0.glb.clouddn.com/icon_zchen9.jpg);
+}
+
+.list_icon {
+  width: 315px;
+  overflow: hidden;
+  margin: 0 auto;
+  a{
+    float: left;
+    display: block;
+    margin: 13px;
+  }
+  i {
+    display: block;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 42px;
+    color: rgba(255, 255, 255, .4);
+    background-color: rgba(0, 0, 0, .6);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      border-radius: 6px;
+      color: rgba(255, 255, 255, .9);
+      background-color: #CE2323;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .info {
+    position: relative;
+    transform: translateY(10%);
+    font-size: .8em;
+    line-height: 2.2em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .info {
+    font-size: .5em;
+    line-height: 2em;
+  }
+}

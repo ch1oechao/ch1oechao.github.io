@@ -1,0 +1,39 @@
+//music
+.music {
+  text-align: center;
+}
+.music-icon {
+  position: relative;
+  top: 30px;
+  z-index: 1;
+  transition: top .6s linear;
+
+  i {
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 42px;
+    color: rgba(255, 255, 255, .6);
+    background-color: rgba(0, 0, 0, .6);
+    transition: all .6s linear;
+    cursor: pointer;
+    &:hover {
+      border-radius: 6px;
+      color: rgba(255, 255, 255, .9);
+      background-color: #CE2323;
+    }
+    &.active {
+      color: rgba(255, 255, 255, .9);
+      background-color: #CE2323;
+    }
+  }
+}
+.music-box {
+  position: relative;
+  top: 50px;
+  opacity: 0;
+  z-index: 0;
+
+  transition: all .6s linear;
+}
