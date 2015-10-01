@@ -68,6 +68,13 @@ featured_image: /images/cover.jpg
 - 适配移动设备
 - 添加 [[ GoogleAnalytics ]](https://www.google.com/analytics/)
 
+
+####2015.10.01
+
+在国庆这样拥挤的日子，窝在房间休闲地写代码~
+
+- 搭建独立模块 [[ Fragment ]](http://www.chen9.info/fragment/) Powered by [[ Hexo ]](https://github.com/hexojs/hexo) & [[ Hexo-theme-next ]](https://github.com/iissnan/hexo-theme-next)
+- [[ Fragment ]](http://www.chen9.info/fragment/) 用于写写生活上的小片段，[ 碎片 ] 由此得名
  
 ---
 
