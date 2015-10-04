@@ -25,6 +25,7 @@
   //Posts List
   .posts {
     list-style: none;
+    animation: bodyshow .9s linear;
 
     li {
       margin-bottom: 32px;
@@ -63,6 +64,7 @@
   text-align: justify;
   text-justify: inter-ideograph;
   font-size: .9em;
+  animation: bodyshow .9s linear;
 
   .container {
     width: 100%;
@@ -173,5 +175,27 @@
     h3 {
       font-size: 1.3em;
     }
+  }
+}
+
+@keyframes 'bodyshow' {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+
+  33% {
+    top: -60px;
+    opacity: .2;
+  }
+
+  66% {
+    top: -30px;
+    opacity: .6;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
   }
 }

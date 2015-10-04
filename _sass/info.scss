@@ -11,10 +11,35 @@
   position: relative;
   transform: translateY(20%);
 
+  animation: infoshow .9s linear;
+
   h2 {
     margin: 8px 0;
   }
 }
+
+@keyframes 'infoshow' {
+  0% {
+    top: -60px;
+    opacity: 0;
+  }
+
+  33% {
+    top: -30px;
+    opacity: .2;
+  }
+
+  66% {
+    top: -15px;
+    opacity: .6;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
 .icon_chen {
   margin-top: 8%;
   margin-left: 50%;
@@ -49,7 +74,7 @@
     line-height: 42px;
     border-radius: 42px;
     color: rgba(255, 255, 255, .4);
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, .8);
     transition: all .5s ease-in-out;
     cursor: pointer;
 
@@ -65,14 +90,14 @@
   .info {
     position: relative;
     transform: translateY(10%);
-    font-size: .8em;
+    font-size: .9em;
     line-height: 2.2em;
   }
 }
 
 @media screen and (max-width: 480px) {
   .info {
-    font-size: .5em;
+    font-size: .8em;
     line-height: 2em;
   }
 }

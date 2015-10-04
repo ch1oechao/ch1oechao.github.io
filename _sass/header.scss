@@ -44,6 +44,7 @@
     width: 100%;
     padding: 0 12%;
     z-index: 1;
+    animation: headershow .9s linear;
   }
 
   .meta {
@@ -101,6 +102,28 @@
       left: 12px;
       font-size: 1.2em;
     }
+  }
+}
+
+@keyframes 'headershow' {
+  0% {
+    top: 47%;
+    opacity: 0;
+  }
+
+  33% {
+    top: 48%;
+    opacity: .2;
+  }
+
+  66% {
+    top: 49%;
+    opacity: .6;
+  }
+
+  100% {
+    top: 50%;
+    opacity: 1;
   }
 }
 

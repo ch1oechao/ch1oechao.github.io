@@ -24,6 +24,7 @@
   background-size: cover;
   background-attachment: fixed;
 
+  background-color: #ddd;
   background-image: url(//7xic0o.com1.z0.glb.clouddn.com/mainbg.jpg);
 
   .list_button {
@@ -52,6 +53,30 @@
     letter-spacing: .8em;
     font-size: 2.6em;
     font-family: 'Stalemate', cursive, sans-serif;
+
+    animation: cateshow .9s linear;
+  }
+}
+
+@keyframes 'cateshow' {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+
+  33% {
+    top: -30px;
+    opacity: .2;
+  }
+
+  66% {
+    top: -15px;
+    opacity: .6;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
   }
 }
 
