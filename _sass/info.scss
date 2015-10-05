@@ -9,12 +9,13 @@
   flex-flow: column;
 
   position: relative;
-  transform: translateY(20%);
+
+  color: rgba(255, 255, 255, .85);
 
   animation: infoshow .9s linear;
 
   h2 {
-    margin: 8px 0;
+    margin: 15px 0;
   }
 }
 
@@ -41,7 +42,7 @@
 }
 
 .icon_chen {
-  margin-top: 8%;
+  margin-top: 12%;
   margin-left: 50%;
   margin-bottom: 15px;
   transform:translateX(-50%);
@@ -58,13 +59,13 @@
 }
 
 .list_icon {
-  width: 315px;
+  width: 324px;
   overflow: hidden;
   margin: 0 auto;
   a{
     float: left;
     display: block;
-    margin: 13px;
+    margin: 7px;
   }
   i {
     display: block;
@@ -73,8 +74,8 @@
     text-align: center;
     line-height: 42px;
     border-radius: 42px;
-    color: rgba(255, 255, 255, .4);
-    background-color: rgba(0, 0, 0, .8);
+    color: rgba(0, 0, 0, .4);
+    background-color: rgba(255, 255, 255, .15);
     transition: all .5s ease-in-out;
     cursor: pointer;
 
@@ -88,8 +89,6 @@
 
 @media screen and (max-width: 640px) {
   .info {
-    position: relative;
-    transform: translateY(10%);
     font-size: .9em;
     line-height: 2.2em;
   }

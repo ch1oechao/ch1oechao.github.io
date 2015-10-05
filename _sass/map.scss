@@ -1,0 +1,48 @@
+.map {
+  width: 80%;
+  margin: 20px auto;
+}
+.map-content {
+  float: left;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  > iframe {
+    width: 480px;
+    height: 360px;
+  }
+}
+.map-container {
+  float: right;
+  margin: 25px 5px;
+}
+
+.map-text {
+
+  text-align: center;
+
+  h2 {
+    margin: 10px 0;
+    font-weight: 500;
+  }
+  p {
+    font-size: 1em;
+    margin: 5px auto;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .map-content {
+    width: 100%;
+    > iframe {
+      width: 80%;
+    }
+  }
+  .map-container {
+    width: 100%;
+  }
+  .map-text {
+    &.one {
+      display: none;
+    }
+  }
+}

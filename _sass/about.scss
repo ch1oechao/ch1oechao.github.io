@@ -4,16 +4,18 @@
   bottom: 0;
   left: 0;
   right: 0;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 
   width: 100%;
   height: 100%;
   overflow: scroll;
+
+  .list_button {
+    z-index: 10;
+  }
+}
+
+.section {
+  text-align: center;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -22,35 +24,20 @@
   -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-
-  background-color: #333;
-  background-image: url(//7xic0o.com1.z0.glb.clouddn.com/aboutbgg.jpg);
-
-  .list_button {
-    z-index: 1;
-  }
 }
 
-.about-container {
-  vertical-align: middle;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
+#section1 {
   color: #fff;
-  article {
-    text-align: center;
-  }
-  b {
-    color: #CE2323;
-  }
+  background-color: #666;
+  background-image: url(//7xic0o.com1.z0.glb.clouddn.com/aboutbg1.jpg);
 }
-
-@media (max-width: 960px) {
-  .about-container{
-    padding: 0 3%;
-  }
+#section2 {
+  color: #480401;
+  background-color: #DFB5B6;
+  background-image: url(//7xic0o.com1.z0.glb.clouddn.com/aboutbg2.jpg);
+}
+#section3 {
+  color: #000;
+  background-color: #E5F7B6;
+  background-image: url(//7xic0o.com1.z0.glb.clouddn.com/aboutbg4.jpg);
 }
