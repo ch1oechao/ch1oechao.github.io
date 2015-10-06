@@ -40,7 +40,25 @@
   .map-container {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .map-content {
+    margin-top: 5px;
+    > iframe {
+      width: 80%;
+      height: 320px;
+    }
+  }
   .map-text {
+    h2 {
+      margin: 5px 0;
+    }
+    p {
+      font-size: .9em;
+      line-height: 1.5em;
+      margin: 3px auto;
+    }
     &.one {
       display: none;
     }
