@@ -10,7 +10,7 @@ destination: ./_site
 encoding: UTF-8
 markdown: kramdown
 #for publish
-highlighter: pygments
+#highlighter: pygments
 #for local
 #highlighter: true
 baseurl: # the subpath of your site, e.g. /blog/
@@ -22,3 +22,4 @@ permalink: /code/:title
 #page
 paginate: 7
 paginate_path: "code/page:num"
+gems: [jekyll-paginate]
