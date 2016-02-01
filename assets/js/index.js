@@ -35,7 +35,7 @@ $(document).ready(function(){
   });
 
 
-  $("header,.container").bind("click",function(){
+  $("header, .container").bind("click",function(){
     //菜单隐藏
     $(".cate-content").hide(400);
   });
@@ -65,28 +65,5 @@ $(document).ready(function(){
     }
     isDisplay = !isDisplay;
   });
-
-  //分页设置
-  $('#pagepiling').pagepiling({
-    menu: '#menu',
-    anchors: ['info', 'hey', 'travel'],
-    sectionsColor: [],
-    navigation: {
-      'textColor': '#f2f2f2',
-      'bulletsColor': '#CE2323',
-      'position': 'right'
-    },
-
-    afterRender: function(){
-      $('#pp-nav').addClass('custom');
-    },
-    afterLoad: function(anchorLink, index){
-      if(index>1){
-        $('#pp-nav').removeClass('custom');
-      }else{
-        $('#pp-nav').addClass('custom');
-      }
-    }
-  });
-
+  
 });
