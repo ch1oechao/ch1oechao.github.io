@@ -6,3 +6,4 @@ _sass/*.map
 _sass/*.css
 node_modules
 *.log
+.jekyll-metadata
