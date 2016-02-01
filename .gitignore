@@ -4,3 +4,5 @@ _site
 .DS_Store
 _sass/*.map
 _sass/*.css
+node_modules
+*.log

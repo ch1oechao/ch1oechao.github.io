@@ -1,19 +1,35 @@
 {
   "name": "zchen9.github.io",
   "version": "1.0.0",
-  "description": "Hey, friends ~ Here is my blog ☞  [[Nice Shot !]](http://www.chen9.info/)",
+  "description": "Hey, friends ~ Here is my blog ☞  [[ Nice Shot ! ]](http://www.chen9.info/)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zchen9/zchen9.github.io.git"
+    "url": "git+https://github.com/zchen9/zchen9.github.io.git"
   },
-  "author": "zchen9 (zhao.zchen9@gmail.com)",
+  "keywords": [
+    "zchen9",
+    "blog",
+    "code"
+  ],
+  "author": "zchen9",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zchen9/zchen9.github.io/issues"
   },
-  "homepage": "https://github.com/zchen9/zchen9.github.io",
+  "homepage": "https://github.com/zchen9/zchen9.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-uglify": "^1.5.1"
+  }
 }
