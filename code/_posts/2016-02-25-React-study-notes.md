@@ -21,7 +21,7 @@ featured_image: /images/react.jpg
 #### Using props 
 
 The child component will depend on data passed in from its parent.
-Data passed in from a parent component is available as a 'property' on the child component. These 'properties' are accessed through `this.prop`
+Data passed in from a parent component is available as a 'property' on the child component. These 'properties' are accessed through `this.props`
 
 By surrounding a JavaScript expression in braces inside JSX (as either an attribute or child), you can drop text or React components into the tree. We access named attributes passed to the component as keys on `this.props` and any nested elements as `this.props.children`.
 
@@ -71,7 +71,7 @@ The situation gets more complicated when the children are shuffled around (as in
 
 #### Reactive state
 
-Based on its props, each component has rendered itself once. props are immutable: they are passed from the parent and are "owned" by the parent. To implement interactions, we introduce mutable state to the component. this.state is private to the component and can be changed by calling this.setState(). When the state updates, the component re-renders itself.
+Based on its props, each component has rendered itself once. props are immutable: they are passed from the parent and are "owned" by the parent. To implement interactions, we introduce mutable state to the component. `this.state` is private to the component and can be changed by calling `this.setState()`. When the state updates, the component re-renders itself.
 
 render() methods are written declaratively as functions of this.props and this.state. The framework guarantees the UI is always consistent with the inputs.
 
@@ -96,7 +96,7 @@ ES6
 
 ##### Updating state
 
-Here, componentDidMount is a method called automatically by React after a component is rendered for the first time. The key to dynamic updates is the call to this.setState().
+Here, `componentDidMount` is a method called automatically by React after a component is rendered for the first time. The key to dynamic updates is the call to `this.setState()`.
 
     componentDidMount: function() {
       this.setState({data: data});
@@ -109,7 +109,7 @@ One common use case is a component wanting to update itself on a time interval. 
 
 It's important to cancel your interval when you don't need it anymore to save memory. React provides lifecycle methods that let you know when a component is about to be created or destroyed.
 
-The below example use the Mixin. Unfortunately ES6 launched without any mixin support. Therefore, there is no support for mixins when you use React with ES6 classes. 
+The below example use the `Mixin`. Unfortunately ES6 launched without any mixin support. Therefore, there is no support for mixins when you use React with ES6 classes. 
 
     var SetIntervalMixin = {
       componentWillMount: function() {
@@ -169,11 +169,10 @@ With the traditional DOM, input elements are rendered and the browser manages th
       }
     });
 
-    /* 
-     * Methods follow the same semantics as regular ES6 classes, meaning that * they don't automatically bind this to the instance. You'll have to 
-     * explicitly use .bind(this) or arrow functions =>.
-     */ 
-
+    // Methods follow the same semantics as regular ES6 classes, meaning that
+    // they don't automatically bind this to the instance. You'll have to
+    // explicitly use .bind(this) or arrow functions =>.
+    
     <input onChange={this.handleTextChange.bind(this)}/>  
 
 #### Uncontrolled Components
