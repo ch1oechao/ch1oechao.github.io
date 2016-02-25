@@ -13,14 +13,14 @@ featured_image: /images/js.jpg
 主要收集了 [[参考规范]](https://github.com/ecomfe/spec/blob/master/javascript-style-guide.md) 一些常用到的 更规范 更优雅JavaScript代码 ~
 
 
-####文件 
+#### 文件 
 
 - ```JavaScript``` 文件使用 ```无BOM``` 的 ```UTF-8``` 编码
 - 在文件结尾处，保留一个空行
 
 	> UTF-8 编码具有更广泛的适应性。BOM 在使用程序或工具处理文件时可能造成不必要的干扰
 
-####注释
+#### 注释
 
 - **单行注释**  单独占一行 ```//``` 后跟一个空格 
 - **多行注释**  有多行注释内容时，使用多个单行注释
@@ -34,9 +34,9 @@ featured_image: /images/js.jpg
 	- 常量 @const {常量}
 	- AMD模块 @module {模块} @exports {接口}
 	
-####语言特性
+#### 语言特性
 
-#####变量 
+##### 变量 
 
 - 变量在使用前必须通过 ```var``` 或 ```let``` 定义, 否则会产生全局变量，污染全局环境
 
@@ -54,7 +54,7 @@ featured_image: /images/js.jpg
 
 	> 变量声明与使用的距离越远，出现的跨度越大，代码的阅读与维护成本越高。虽然JavaScript的变量是函数作用域，还是应该根据编程中的意图，缩小变量出现的距离空间。
 
-#####条件
+##### 条件
 
 - 在 Equality Expression 中使用类型严格的 ```===```。仅当判断 ```null``` 或 ```undefined``` 时，允许使用 ```== null``` 
 
@@ -88,7 +88,7 @@ featured_image: /images/js.jpg
 - 如果函数或全局中的 ```else``` 块后没有任何语句，可以删除 ```else```
 
 
-#####循环
+##### 循环
 
 - 对有序集合进行遍历时，缓存 ```length```
 
@@ -134,7 +134,7 @@ featured_image: /images/js.jpg
 			var ele = eles[len];
 		}
 		
-#####类型
+##### 类型
 
 **类型检测**
 
@@ -352,7 +352,7 @@ featured_image: /images/js.jpg
 	> 如果没有特别的需求，减少或避免使用delete。delete的使用会破坏部分 JavaScript 引擎的性能优化。
 
 
-#####DOM
+##### DOM
 
 **元素获取**
 

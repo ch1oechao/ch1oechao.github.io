@@ -1,19 +1,19 @@
 ---
 layout: post
-title:  "Baidu-ife Task0001 Note"
-date:  2015-05-02
+title: "Baidu-ife Task0001 Note"
+date: 2015-05-02
 categories: css
 featured_image: /images/baidu-ife.jpg
 ---
 
-###task0001 - HTML/CSS基础 [04.13-04.20]
+### task0001 - HTML/CSS基础 [04.13-04.20]
 
 [[baidu-ife task0001 任务地址]](https://github.com/baidu-ife/ife/tree/master/task/task0001)
 
 [[查看Demo]](http://www.chen9.info/baidu-ife-task/task0001/zchen9/index.html)
 
 
-**04.13-04.14**
+##### 04.13 - 04.14
 
 针对任务1-6进行练习，其中遇到的问题主要在任务6
 
@@ -108,7 +108,7 @@ IE不支持...
 
 
 
-04.15-04.18
+##### 04.15-04.18
 
 练习任务7：
 
@@ -258,7 +258,7 @@ table布局灵活性较差,作业设计时只考虑了左右布局的实现，�
 
 
 
-**04.20**
+##### 04.20
 
 <b>总结：</b>
     

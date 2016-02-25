@@ -8,7 +8,7 @@ featured_image: /images/js.jpg
 
 设计模式真是个好东西~
 
-###通用命名空间函数
+### 通用命名空间函数
 
 	MYAPP.namespace('MYAPP.modules.module2');
 	

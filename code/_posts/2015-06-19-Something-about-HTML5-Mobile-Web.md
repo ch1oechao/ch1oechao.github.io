@@ -9,17 +9,17 @@ featured_image: /images/html5.jpg
 
 ### 关于 HTML5 & 移动Web开发 笔记摘抄
 
-####学习HTML5的一些网站
+#### 学习HTML5的一些网站
 - [[ HTML5 Doctor ]](http://html5doctor.com/)
 - [[ Dive Into HTML5 ]](http://diveintohtml5.info/)
 - [[ W3C ]](http://www.w3.org/html/wg/drafts/html/master/Overview.html)
 
-####跨浏览器HTML5
+#### 跨浏览器HTML5
 可以使用 [[ Modernizr ]](http://modernizr.com/) 在一些不支持HTML5的浏览器或设备上支持HTML5，同时可以设置样式，并且检测HTML5各个功能在不同浏览器的兼容性。
 
     <script src="//libs.cncdn.cn/modernizr/2.8.3/modernizr.min.js"></script>
 
-#####HTML5 CSS重置
+##### HTML5 CSS重置
     article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
         margin: 0;
         padding: 0;
@@ -30,12 +30,12 @@ featured_image: /images/html5.jpg
     }
  
 
-#####HTML5 块级元素
+##### HTML5 块级元素
     article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
         display: block;
     }
 
-#####CSS媒介查询(Media query)
+##### CSS媒介查询(Media query)
 
 移动优先网站，在桌面设备上优雅降级。
 这种方式可以使用以下CSS：
@@ -54,9 +54,9 @@ featured_image: /images/html5.jpg
     }
 
 
-####移动端的配置和优化
+#### 移动端的配置和优化
 
-#####通过界面图标启动Web应用
+##### 通过界面图标启动Web应用
 
 适用设备： iOS/Android
 
@@ -78,7 +78,7 @@ featured_image: /images/html5.jpg
 
 <code>precomposed</code>： 指的是苹果设备在添加应用图标时，保持原本图片设计样式，而不添加统一自带的苹果优化后样式。
 
-#####避免文本字体大小重置
+##### 避免文本字体大小重置
 
     html {
         -webkit-text-size-adjust: 100%;
@@ -86,7 +86,7 @@ featured_image: /images/html5.jpg
         text-size-adjust: 100%;
     }
 
-#####优化浏览器视口宽度设置
+##### 优化浏览器视口宽度设置
 
 通用：
 
@@ -100,7 +100,7 @@ featured_image: /images/html5.jpg
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-#####iPhone下全屏模式启动
+##### iPhone下全屏模式启动
 
 全屏启动：
 
@@ -111,9 +111,9 @@ featured_image: /images/html5.jpg
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 
-####移动设备的交互方式
+#### 移动设备的交互方式
 
-#####利用触控来移动页面元素
+##### 利用触控来移动页面元素
 
 使用jQuery：
 
@@ -128,7 +128,7 @@ featured_image: /images/html5.jpg
         $(this).css('top', y + 'px');
     });
 
-#####检测和处理横竖屏切换事件
+##### 检测和处理横竖屏切换事件
 
     window.onorientationchange = function(){
         update();
@@ -154,13 +154,13 @@ featured_image: /images/html5.jpg
     update();
 
 
-#####滑动事件
+##### 滑动事件
 
 <code>Zepto</code> 提供了以下方法： 
 
 <code>swipe / swipeLeft / swipeRight / swipeUp / swipeDown</code>
 
-#####利用手势操作图片缩放
+##### 利用手势操作图片缩放
 
 给被缩放元素注册了 <code>ongesturechange</code> 事件，缩放比例根据 <code>e.target.scale</code> 计算。
 
@@ -176,9 +176,9 @@ featured_image: /images/html5.jpg
     }
 
 
-####移动设备访问
+#### 移动设备访问
 
-#####获取位置信息 <code>navigator.geolocation</code>
+##### 获取位置信息 <code>navigator.geolocation</code>
 
     function getLocation(){
         navigator.geolocation.getCurrentPosition(showInfo);
@@ -191,9 +191,9 @@ featured_image: /images/html5.jpg
     }
     getLocation();
 
-####移动富媒体
+#### 移动富媒体
 
-#####移动设备上播放音频 <code>\<audio\></code> 
+##### 移动设备上播放音频 <code>\<audio\></code> 
 
 - controls    告诉浏览器，该音频播放元素需要显示一个控制元素。
 - autobuffer  布尔值，该属性添加后将会自动为音频做缓冲。 
@@ -207,7 +207,7 @@ featured_image: /images/html5.jpg
         <source src="audio/123.ogg">
     </audio>
 
-#####使用离线缓存
+##### 使用离线缓存
 
 <code>CACHE MANIFEST</code> 下可以列出想要做离线缓存的文件
 
@@ -236,7 +236,7 @@ Addtype可以使浏览器识别以上类别的扩展名文件：
     AddType text/x-vcard vcf 
 
 
-#####设置未来过期时间
+##### 设置未来过期时间
 
 <code>.htaccess</code> 文件配置 
 

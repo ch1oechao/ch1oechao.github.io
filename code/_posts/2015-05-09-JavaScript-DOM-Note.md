@@ -7,7 +7,7 @@ featured_image: /images/JavaScriptDOM.jpg
 
 ---
 
-###《JavaScript DOM 编程艺术》 笔记摘抄
+### 《JavaScript DOM 编程艺术》 笔记摘抄
 
 [DOM操作两项原则]
 

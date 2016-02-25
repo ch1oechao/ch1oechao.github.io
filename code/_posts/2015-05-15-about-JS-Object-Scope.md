@@ -6,7 +6,7 @@ categories: JavaScript
 featured_image: /images/js.jpg
 ---
 
-###JavaScript作用域学习笔记
+### JavaScript作用域学习笔记
 
 ---
 

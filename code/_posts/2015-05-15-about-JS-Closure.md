@@ -6,7 +6,7 @@ categories: JavaScript
 featured_image: /images/js.jpg
 ---
 
-###JavaScript闭包学习笔记
+### JavaScript闭包学习笔记
 
 ---
 

@@ -7,7 +7,7 @@ featured_image: /images/http.jpg
 
 ---
 
-###《图解HTTP》 笔记摘抄
+### 《图解HTTP》 笔记摘抄
 
 参考资料: [[经典的Web应用网络模型]](http://mp.weixin.qq.com/s?__biz=MjM5MTA1MjAxMQ==&mid=206029700&idx=1&sn=f265592ea5ac32a6315448701ca17b8d#rd) 
 

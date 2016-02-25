@@ -26,11 +26,11 @@ featured_image: /images/js.jpg
 
 ---
 
-##JavaScript Design Patterns [ JavaScript设计模式 ]
+## JavaScript Design Patterns [ JavaScript设计模式 ]
 
-####The Constructor Pattern  [ 构造器模式 ]
+#### The Constructor Pattern  [ 构造器模式 ]
 
->Object constructors are used to create specific types of objects - both preparing the object for use and accepting arguments which a constructor can use to set the values of member properties and methods when the object is first created.
+> Object constructors are used to create specific types of objects - both preparing the object for use and accepting arguments which a constructor can use to set the values of member properties and methods when the object is first created.
 
 对象的构造器用来创建特定类型的对象，需要准备将要使用的对象以及可接受的参数，这些参数可以在创建对象时，设置成员属性以及方法中用到。
 
@@ -50,7 +50,7 @@ featured_image: /images/js.jpg
     // 使用new方法创建新对象
     var newObject = new Object();
 
->Where the "Object" constructor in the final example creates an object wrapper for a specific value, or where no value is passed, it will create an empty object and return it.
+> Where the "Object" constructor in the final example creates an object wrapper for a specific value, or where no value is passed, it will create an empty object and return it.
 
 最后这个方法如果没有特定的传值，将创建一个空对象。
 
@@ -182,7 +182,7 @@ JavaScript虽然不支持类的概念，但却支持特殊的构造方法来使�
     console.log( civic.toString() );
     console.log( mondeo.toString() );
 
->One is that it makes inheritance difficult and the other is that functions such as toString() are redefined for each of the new objects created using the Car constructor. This isn't very optimal as the function should ideally be shared between all of the instances of the Car type.
+> One is that it makes inheritance difficult and the other is that functions such as toString() are redefined for each of the new objects created using the Car constructor. This isn't very optimal as the function should ideally be shared between all of the instances of the Car type.
 
 <code>toString()</code>在定义每一项实例对象时都会重新定义一次，但这并不是我们想要的。最理想的方式是每一个新创建的实例对象都可以继承<code>toString()</code>方法。
 
@@ -207,7 +207,7 @@ JavaScript虽然不支持类的概念，但却支持特殊的构造方法来使�
 
 ---
 
->The Module pattern is based in part on object literals and so it makes sense to refresh our knowledge of them first.
+> The Module pattern is based in part on object literals and so it makes sense to refresh our knowledge of them first.
 
 模块模式基于对象字面量：
 
@@ -228,21 +228,21 @@ JavaScript虽然不支持类的概念，但却支持特殊的构造方法来使�
 对象字面量不需要使用<code>new</code>创建实例对象，对象所有属性将包裹在<code>{}</code>定义，在<code>{}</code>之外需要添加新的对象属性值，可以使用<code>myObjectLiteral.newPropertyName = "newValue"</code>创建。
 
 
-####The Module Pattern [ 模块模式 ]
+#### The Module Pattern [ 模块模式 ]
 
->In JavaScript, the Module pattern is used to further emulate the concept of classes in such a way that we're able to include both public/private methods and variables inside a single object, thus shielding particular parts from the global scope. What this results in is a reduction in the likelihood of our function names conflicting with other functions defined in additional scripts on the page.
+> In JavaScript, the Module pattern is used to further emulate the concept of classes in such a way that we're able to include both public/private methods and variables inside a single object, thus shielding particular parts from the global scope. What this results in is a reduction in the likelihood of our function names conflicting with other functions defined in additional scripts on the page.
 
 模块模式将更接近于类的概念，在同一个对象中，可以同时拥有私有和公有的属性或方法，这样可以屏蔽掉一些全局作用域的特殊部分，比如函数之间一些函数名或属性名的冲突。
 
 <b>Privacy [ 私有 ]</b>
 
->It provides a way of wrapping a mix of public and private methods and variables, protecting pieces from leaking into the global scope and accidentally colliding with another developer's interface. With this pattern, only a public API is returned, keeping everything else within the closure private.
+> It provides a way of wrapping a mix of public and private methods and variables, protecting pieces from leaking into the global scope and accidentally colliding with another developer's interface. With this pattern, only a public API is returned, keeping everything else within the closure private.
 
 模块模式的私有可以将方法中的私有/公有的方法或变量包裹起来，防止泄漏到全局作用域中，与其他模块的属性或方法发生冲突。使用模块模式，返回值只是一个公开的API，而所有函数内的属性和方法都将在闭包内成为私有。
 
->This gives us a clean solution for shielding logic doing the heavy lifting whilst only exposing an interface we wish other parts of our application to use. 
->
->Within the Module pattern, variables or methods declared are only available inside the module itself thanks to closure. Variables or methods defined within the returning object however are available to everyone.
+> This gives us a clean solution for shielding logic doing the heavy lifting whilst only exposing an interface we wish other parts of our application to use. 
+> 
+> Within the Module pattern, variables or methods declared are only available inside the module itself thanks to closure. Variables or methods defined within the returning object however are available to everyone.
 
 这样做提供了一个简单明了的解决方案：只暴露了一个接口供其他应用程序部分使用。
 
@@ -293,9 +293,9 @@ JavaScript虽然不支持类的概念，但却支持特殊的构造方法来使�
 
 Advantages [ 优点 ]
 
->For starters, it's a lot cleaner for developers coming from an object-oriented background than the idea of true encapsulation, at least from a JavaScript perspective.
+> For starters, it's a lot cleaner for developers coming from an object-oriented background than the idea of true encapsulation, at least from a JavaScript perspective.
 
->Secondly, it supports private data - so, in the Module pattern, public parts of our code are able to touch the private parts, however the outside world is unable to touch the class's private parts.
+> Secondly, it supports private data - so, in the Module pattern, public parts of our code are able to touch the private parts, however the outside world is unable to touch the class's private parts.
 
 模块模式更加接近于类的封装。
 
@@ -303,9 +303,9 @@ Advantages [ 优点 ]
 
 Disadvantages [ 缺点 ]
 
->We can't access private members in methods that are added to the object at a later point. 
+> We can't access private members in methods that are added to the object at a later point. 
 
->Developers can't easily extend privates either, so it's worth remembering privates are not as flexible as they may initially appear.
+> Developers can't easily extend privates either, so it's worth remembering privates are not as flexible as they may initially appear.
 
 我们无法访问那些之后在方法里添加的私有成员。
 
@@ -313,16 +313,16 @@ Disadvantages [ 缺点 ]
 
 ####The Observer Pattern [ 观察者模式 ]
 
->The Observer is a design pattern where an object (known as a subject) maintains a list of objects depending on it (observers), automatically notifying them of any changes to state.
->
+> The Observer is a design pattern where an object (known as a subject) maintains a list of objects depending on it (observers), automatically notifying them of any changes to state.
+> 
 When a subject needs to notify observers about something interesting happening, it broadcasts a notification to the observers (which can include specific data related to the topic of the notification).
 
 观察者模式是 一个主对象拥有一系列依赖于它的对象，也就是观察者，实时自动地通知它们哪里发生了改变。
 
 当一个主体对象需要通知所有观察者有什么事情发生的时候，它将对观察者们进行对广播，其中包含了一些特定的与主体相关的数据。
 
->We can now expand on what we've learned to implement the Observer pattern with the following components:
->
+> We can now expand on what we've learned to implement the Observer pattern with the following components:
+> 
 - Subject: maintains a list of observers, facilitates adding or removing observers
 - Observer: provides a update interface for objects that need to be notified of a Subject's changes of state
 - ConcreteSubject: broadcasts notifications to observers on changes of state, stores the state of ConcreteObservers
@@ -335,8 +335,8 @@ When a subject needs to notify observers about something interesting happening, 
 - 具体主体：实时通知更新的数据状态，并存储具体观察者的状态。
 - 具体观察者：存储相关的具体主体，对应更新接口，保证与具体主体的状态相同。
 
->First, let's model the list of dependent Observers a subject may have:
->
+> First, let's model the list of dependent Observers a subject may have:
+> 
 模拟具体实例可能拥有的一系列观察者：
 
     // 创建一系列观察对象
@@ -374,7 +374,7 @@ When a subject needs to notify observers about something interesting happening, 
       this.observerList.splice( index, 1 );
     };
 
->Next, let's model the Subject and the ability to add, remove or notify observers on the observer list.
+> Next, let's model the Subject and the ability to add, remove or notify observers on the observer list.
 > 
 > 接下来模拟主体，给予可以添加或删除或更新观察者的功能：
 
@@ -398,7 +398,7 @@ When a subject needs to notify observers about something interesting happening, 
       }
     };
 
->We then define a skeleton for creating new Observers. The update functionality here will be overwritten later with custom behaviour.
+> We then define a skeleton for creating new Observers. The update functionality here will be overwritten later with custom behaviour.
 
 当我们创建了一个新的观察者，update方法将会在稍后进行重写。
 
@@ -409,14 +409,14 @@ When a subject needs to notify observers about something interesting happening, 
       };
     }
 
->In our sample application using the above Observer components, we now define:
+> In our sample application using the above Observer components, we now define:
 
-> 
+>  
 - A button for adding new observable checkboxes to the page
 - A control checkbox which will act as a subject, notifying other checkboxes they should be checked
 - A container for the new checkboxes being added
 
->We then define ConcreteSubject and ConcreteObserver handlers for both adding new observers to the page and implementing the updating interface. See below for inline comments on what these components do in the context of our example.
+> We then define ConcreteSubject and ConcreteObserver handlers for both adding new observers to the page and implementing the updating interface. See below for inline comments on what these components do in the context of our example.
 
 将举一个实例来说明观察者：
 
@@ -496,8 +496,5 @@ Sample script:
         container.appendChild( check );
     }
 
----
-
-####未完待续...
-
-╮(╯▽╰)╭
+--- 
+ 

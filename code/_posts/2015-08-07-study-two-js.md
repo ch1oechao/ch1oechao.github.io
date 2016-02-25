@@ -15,9 +15,9 @@ Two.js 是一个对面现代Web浏览器的二维绘图API，它可以提供多�
 
 在线编辑 ```Two.js``` 的好地方： [http://www.javascriptoo.com/two-js](http://www.javascriptoo.com/two-js)
 
-####Setting Up 准备工作
+#### Setting Up 准备工作
 
-######创建实例
+###### 创建实例
 
 	var two = new Two({
 		fullscreen: true
@@ -31,7 +31,7 @@ Two.js 是一个对面现代Web浏览器的二维绘图API，它可以提供多�
 
 - ```type``` 指定需要应用的渲染器类型，你可以选择 SVG / Canvas / WebGL 默认情况下，Two.js 使用 SVG (需要自己检测浏览器是否支持选择的渲染器)
 
-######添加到页面中
+###### 添加到页面中
 
 创建好实例以后，我们将使用到 ```appendTo``` 方法，将实例添加到页面中
 
@@ -49,9 +49,9 @@ Two.js 是一个对面现代Web浏览器的二维绘图API，它可以提供多�
 
 设置完毕后，我们就可以开始绘制图形啦~
 
-####Drawing Basic Shapes 绘制基本图形
+#### Drawing Basic Shapes 绘制基本图形
 
-#####Line 线段
+##### Line 线段
 
 ```makeLine(x1, y1, x2, y2)```
 
@@ -71,7 +71,7 @@ Two.js 是一个对面现代Web浏览器的二维绘图API，它可以提供多�
 ![线段](http://7xl44r.com1.z0.glb.clouddn.com/two-line.png)
 
 
-#####Circle 圆形
+##### Circle 圆形
 
 ```makeCircle(x, y, radius)```
 	
@@ -91,7 +91,7 @@ Two.js 是一个对面现代Web浏览器的二维绘图API，它可以提供多�
 	
 ![圆形](http://7xl44r.com1.z0.glb.clouddn.com/two-circle.png)
 
-#####Rectangle 方形
+##### Rectangle 方形
 
 ```makeRectangle(x, y, width, height)```
 
@@ -113,7 +113,7 @@ Two.js 是一个对面现代Web浏览器的二维绘图API，它可以提供多�
 ![方形](http://7xl44r.com1.z0.glb.clouddn.com/two-rect.png)
 
 
-#####Ellipse 椭圆
+##### Ellipse 椭圆
 
 ```makeEllipse(x, y, width, height)```
 
@@ -133,7 +133,7 @@ makeEllipse(x, y, width, height)的构造和方形一致，也需要四个参数
 
 ![椭圆](http://7xl44r.com1.z0.glb.clouddn.com/two-ellipse.png)
 
-#####Curve 曲线
+##### Curve 曲线
 
 ```makeCurve(x1, y1, x2, y2, xN, yN, open)```
 
@@ -162,7 +162,7 @@ This method also recognizes the format
 ![曲线](http://7xl44r.com1.z0.glb.clouddn.com/two-curve.png)
 
 	
-#####Polygon 多边形
+##### Polygon 多边形
 
 ```makePolygon(x1, y1, x2, y2, xN, yN, open)```
 
@@ -193,7 +193,7 @@ This method also recognizes the format
 ![多边形](http://7xl44r.com1.z0.glb.clouddn.com/two-ploygon.png)
 
 
-####Making Groups 在画面中绘制多种图形
+#### Making Groups 在画面中绘制多种图形
 
 目前为止，我们的画面一直都是在绘制单个的图形，然而在同一个画面上绘制多个图形进行拼接也是可以的~
 
@@ -259,7 +259,5 @@ This method also recognizes the format
 ---
 
 参考链接：[[ Two.js Tutorial ]](http://code.tutsplus.com/tutorials/drawing-with-twojs--net-32024)
-
-这篇记录了简单的绘制平面图形的方法，未来一篇会记录动画绘制方法~
 
 END.
