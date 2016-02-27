@@ -204,7 +204,7 @@ An uncontrolled component maintains its own internal state.
       render: function() {
           return (
             <div>
-                <Child onChange={this.handleCallback} />
+                <Child onSomethingChange={this.handleCallback} />
             </div>
           );
       }
@@ -213,7 +213,7 @@ An uncontrolled component maintains its own internal state.
 
     var Child = React.createClass({
       handleSomthing: function(data) {
-        this.props.handleCallback(data);
+        this.props.onSomethingChange(data);
       }
 
       // ...
