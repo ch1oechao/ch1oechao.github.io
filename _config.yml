@@ -17,9 +17,3 @@ baseurl: # the subpath of your site, e.g. /blog/
 codeurl: /code/
 abouturl: /about/
 fragmenturl: /fragment/
-permalink: /code/:title
-
-#page
-paginate: 7
-paginate_path: "code/page:num"
-gems: [jekyll-paginate]
