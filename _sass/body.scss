@@ -116,11 +116,9 @@
     color: #CE2323;
     font-weight: 400;
     background-color: rgba(255, 58, 71, .04);
-    font-family: 'Consolas', 'Lucida Grande', arial, sans-serif;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace, Arial, sans-serif;
 
     &.hljs {
-      overflow: hidden;
-
       line-height: 1.4em;
       padding: 15px;
 
@@ -135,6 +133,7 @@
       word-break: break-word;
       word-wrap: break-word;
     }
+
   }
   blockquote {
     border-left: 5px solid #ddd;
