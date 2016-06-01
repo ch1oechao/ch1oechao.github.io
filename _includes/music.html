@@ -1,8 +1,0 @@
-<div class="music">
-  <span class="music-icon">
-    <i class="fa fa-music"></i>
-  </span>
-  <div class="music-box">
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="http://music.163.com/outchain/player?type=0&id=106353209&auto=0&height=90"></iframe>
-  </div>
-</div>

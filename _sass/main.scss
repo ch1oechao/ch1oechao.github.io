@@ -1,21 +1,25 @@
-//main
+$logo-width: 350px;
+$avatar-width: 100px;
+$icon-width: 50px;
+
 .main {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-
+  bottom: 0;
   width: 100%;
   height: 100%;
-  overflow: scroll;
+  overflow: hidden;
+  background-color: #FFF;
+}
 
+.logo-container {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  transition: all 500ms ease-in-out;
+  background: transparent;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -24,101 +28,169 @@
   background-size: cover;
   background-attachment: fixed;
 
-  background-color: #ddd;
-  background-image: url(//o40ss64l8.qnssl.com/mainbg.jpg);
-
-  .list_button {
-    z-index: 1;
-  }
-}
-
-.main-container {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-
-  width: 768px;
-  height: 240px;
-  background-color: rgba(25, 25, 25, .2);
-
-  a {
-    display: inline-block;
-    line-height: 1em;
-    margin: 0 5px;
-    padding-left: 20px;
-    word-spacing: 1.5em;
-    letter-spacing: .8em;
-    font-size: 2.6em;
-    font-family: 'Stalemate', cursive, sans-serif;
-
-    animation: cateshow .9s linear;
-  }
-}
-
-@keyframes 'cateshow' {
-  0% {
-    top: -50px;
+  &:before {
+    content: '「 你好哇，我是照澄 」';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 10em;
+    color: #FFF;
+    font-size: 2em;
+    text-align: center;
     opacity: 0;
   }
 
-  33% {
-    top: -30px;
-    opacity: .2;
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .55);
+    opacity: 0;
   }
 
-  66% {
-    top: -15px;
-    opacity: .6;
-  }
-
-  100% {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .main-container {
-    flex-flow: column;
-    -webkit-flex-flow: column;
-    a {
-      margin: 5px 0;
+  &.switch {
+    background-image: url(//7xic0o.com1.z0.glb.clouddn.com/zc.jpg);
+    &:after,
+    &:before {
+      opacity: 1;
     }
   }
 }
 
-.hvr-underline-from-center {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
+.info-container {
   position: relative;
-  overflow: hidden;
+  width: 100%;
+  height: 30%;
+  background: #000;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    content: '';
+    top: -5px;
+    position: absolute;
+    width: 110%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, .25);
+    z-index: 0;
+  }
+  &:before {
+    right: 0;
+    transform: rotate(5deg);
+  }
+  &:after {
+    left: 0;
+    transform: rotate(-5deg);
+  }
 }
-.hvr-underline-from-center:before {
-  content: "";
+
+.logo-svg {
   position: absolute;
-  z-index: -1;
   left: 50%;
-  right: 50%;
-  bottom: 0px;
-  background: #CE2323;
-  height: 1px;
-  -webkit-transition-property: left, right;
-  transition-property: left, right;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(.9);
+  width: $logo-width;
+  height: $logo-width;
+  opacity: 1;
+
+  &.switch {
+    opacity: 0;
+  }
+
+  path {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: dash 6s linear forwards;
+  }
+
+  circle {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: dash 2s linear forwards;
+  }
+
 }
-.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
-  left: 0;
-  right: 0;
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.info-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 40px;
+  width: 800px;
+  height: 150px;
+  z-index: 1;
+}
+
+.info-avatar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: $avatar-width;
+  height: $avatar-width;
+  border-radius: $avatar-width;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  box-shadow: 0 0 0 3px #000,
+              0 0 0 5px #fff;
+
+  &:hover {
+    box-shadow: 0 0 0 3px #000,
+                0 0 0 6px #CE2323;
+  }
+
+}
+
+
+.info-link {
+  width: 100%;
+  height: 100%;
+  margin-left: 60px;
+}
+
+.info-icon {
+  display: block;
+  float: left;
+  width: $icon-width;
+  height: $icon-width;
+  overflow: hidden;
+  margin: 20px;
+
+  i {
+    display: block;
+    width: $icon-width;
+    height: $icon-width;
+    text-align: center;
+    line-height: $icon-width;
+    border-radius: $icon-width;
+    color: #000;
+    background-color: rgba(255, 255, 255, .3);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      border-radius: 6px;
+      color: rgba(255, 255, 255, .9);
+      background-color: #CE2323;
+    }
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .logo-container {
+    flex-flow: column;
+    -webkit-flex-flow: column;
+  }
 }
