@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     notify = require('gulp-notify');
 
 gulp.task('scripts', function() {
-    return gulp.src('assets/index.js')
+    return gulp.src('assets/js/index.js')
         //js代码校验
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
@@ -20,7 +20,7 @@ gulp.task('scripts', function() {
         //压缩脚本文件
         .pipe(uglify())
         //输出压缩文件到指定目录
-        .pipe(gulp.dest('assets'))
+        .pipe(gulp.dest('assets/js'))
         //提醒任务完成
         .pipe(notify({
             message: 'Scripts task complete'

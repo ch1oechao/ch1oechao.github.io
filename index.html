@@ -3,9 +3,40 @@ layout: default
 ---
 
 <div class="main">
-  <div class="main-container">
-    <a class="hvr-underline-from-center" href="{{ site.codeurl}}">think</a>
-    <a class="hvr-underline-from-center" href="{{ site.abouturl}}">out</a>
-    <a class="hvr-underline-from-center" href="{{ site.fragmenturl}}">loud</a>
-  </div>
+  <section class="logo-container">
+    <svg class="logo-svg" width="350" height="350">
+      <g class="svg-c">
+        <path d="M2 60 L2 2 L60 2 " stroke-width="4" fill="transparent" stroke="#000"/>
+      </g>
+      <g class="svg-h">
+        <path d="M2 350 L2 290" stroke-width="4" fill="transparent" stroke="#000"/>
+        <path d="M0 350 L60 295 L60 330" stroke-width="4" fill="transparent" stroke="#000"/>
+        <path d="M0 348 L45 348" stroke-width="4" fill="transparent" stroke="#000"/>
+      </g>
+      <g class="svg-e">
+        <path d="M290 59 L290 2 L345 2" stroke-width="4" fill="transparent" stroke="#000"/>
+        <path d="M345 2 L293 60 L335 60" stroke-width="4" fill="transparent" stroke="#000"/>
+      </g>
+      <g class="svg-n">
+        <path d="M348 290 L348 348 L290 348" stroke-width="4" fill="transparent" stroke="#000"/>
+      </g>
+      <g class="svg-camera">
+        <circle cx="175" cy="175" r="55" stroke="#000" fill="transparent" stroke-width="4"/>
+      </g>
+    </svg>
+  </section>
+  <section class="info-container">
+    <div class="info-content">
+      <img class="info-avatar" src="{{site.baseurl}}/images/zchen9_spring.png" />
+      <div class="info-link">
+        <a class="info-icon" href="mailto:zhao.zchen9@gmail.com"><i class="fa fa-envelope"></i></a>
+        <a class="info-icon" href="https://github.com/zchen9" target="_blank"><i class="fa fa-github-alt"></i></a>
+        <a class="info-icon" href="{{site.codeurl}}"  target="_blank"><i class="fa fa-code"></i></a>
+        <div style="width: 100px; height: 100px; float: left; margin: 0 20px;"></div>
+        <a class="info-icon" href="{{site.fragmenturl}}"  target="_blank"><i class="fa fa-puzzle-piece"></i></a>
+        <a class="info-icon" href="http://weibo.com/yoho92" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a class="info-icon" href="http://music.163.com/#/user/home?id=2169582" target="_blank"><i class="fa fa-music"></i></a>
+      </div>
+    </div>
+  </section>
 </div>
