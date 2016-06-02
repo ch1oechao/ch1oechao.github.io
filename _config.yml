@@ -1,10 +1,8 @@
 # Site settings
 title: 'Nice Shot'  # Your Title
 tagline: 'To find something interesting'  # A brief tagline for your site
-sidebar_image: /images/cover.jpg
 timezone: 'Asia/Shanghai'
 destination: ./_site
-
 
 # Build settings
 encoding: UTF-8
@@ -15,5 +13,14 @@ markdown: kramdown
 #highlighter: true
 baseurl: # the subpath of your site, e.g. /blog/
 codeurl: /code/
-abouturl: /about/
 fragmenturl: /fragment/
+
+# Personal info
+avatar: //tva2.sinaimg.cn/crop.0.0.640.640.300/837c3916jw8f3phjbg2fij20hs0hsmxf.jpg
+email: zhao.zchen9@gmail.com
+github: https://github.com/zchen9
+weibo: //weibo.com/yoho92
+music: //music.163.com/#/user/home?id=2169582
+
+# Logo setting
+logocolor: '#000'
