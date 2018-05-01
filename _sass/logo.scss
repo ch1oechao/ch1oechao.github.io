@@ -17,7 +17,7 @@ $icon-width: 50px;
   background-attachment: fixed;
 
   &:before {
-    content: '「 你好哇，我是照澄 」';
+    content: '「 Long time no see. 」';
     position: absolute;
     top: 50%;
     display: block;
@@ -39,14 +39,14 @@ $icon-width: 50px;
   }
 
   &.switch {
-    background-image: url(//7xic0o.com1.z0.glb.clouddn.com/zc.jpg);
+    background-image: url(//7xic0o.com1.z0.glb.clouddn.com/mememe3.png);
+    background-position: center bottom;
     &:after,
     &:before {
       opacity: 1;
     }
   }
 }
-
 
 .logo-svg {
   position: absolute;
