@@ -17,7 +17,7 @@ $icon-width: 50px;
   background-attachment: fixed;
 
   &:before {
-    content: '「 Long time no see. 」';
+    content: '「 Make every day count 」';
     position: absolute;
     top: 50%;
     display: block;
@@ -39,7 +39,7 @@ $icon-width: 50px;
   }
 
   &.switch {
-    background-image: url(//7xic0o.com1.z0.glb.clouddn.com/mememe3.png);
+    background-image: url('../../images/fly.JPG');
     background-position: center bottom;
     &:after,
     &:before {
