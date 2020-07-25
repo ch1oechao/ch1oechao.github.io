@@ -1,12 +1,14 @@
 $(document).ready(function(){
-  var $avatar = $('.info-avatar');
+  var $shutter = $('#cameraShutter');
 
-  function switchScreen() {
-    $('.logo-svg').toggleClass('switch');
-    $('.logo-container').toggleClass('switch');
+  function printPhoto() {
+    $('.info-content').toggleClass('animate');
+    $('.camera .glass').toggleClass('active');
   }
   
-  $avatar.on('click', switchScreen);
+  $shutter.on('click', printPhoto);
+
+  setTimeout(printPhoto, 500);
 
   console.log('© zchen9 🙋 2015-' + (new Date()).getFullYear());
   

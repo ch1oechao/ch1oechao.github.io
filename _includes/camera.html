@@ -1,0 +1,39 @@
+<div class="camera-container">
+  <!-- inspired by https://fossheim.io/writing/posts/css-polaroid-camera/ -->
+  <div class="camera" aria-label="Photorealistic illustration of a Polaroid camera">
+    <div class="top">
+      <div class="flash"></div>
+      <div class="timer"></div>
+      <div class="sensor"></div>
+      <div class="lens">
+        <div class="glass"></div>
+      </div>
+      <img class="shutter" id="cameraShutter" src="{{site.avatar}}" />
+      <div class="viewfinder">
+        <div class="glass">
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle"></div>
+      </div>
+      <div class="power"></div>
+      <div class="title"></div>
+    </div>
+    <div class="bottom">
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="handle"></div>
+        </div>
+      </div>
+      <div class="printer">
+        {% include info.html %}
+      </div>
+      <div class="labels">
+        <div class="rainbow"></div>
+        <div class="logo">Polaroid</div>
+        <div class="type"></div>
+      </div>
+    </div>
+  </div>
+</div>

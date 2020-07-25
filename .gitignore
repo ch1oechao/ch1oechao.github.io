@@ -7,3 +7,4 @@ _sass/*.css
 node_modules
 *.log
 .jekyll-metadata
+.jekyll-cache

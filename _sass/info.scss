@@ -15,60 +15,61 @@ $icon-width: 50px;
 }
 
 .info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  width: 100%;
-  height: 30%;
-  background-color: #000;
-  z-index: 1;
+  top: 5px;
+  margin: 0 auto;
+  width: 400px;
+  height: 420px;
+  overflow: hidden;
+  z-index: 9;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(-180deg, #0E090D 1px, #343233 6px, transparent 6px 100%);
+  }
+}
+
+.info-photo {
+  width: 320px;
+  height: 320px;
+  margin: 20px;
 }
 
 .info-content {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 800px;
-  height: 150px;
-  z-index: 1;
-}
-
-.info-avatar {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: $avatar-width;
-  height: $avatar-width;
-  border-radius: $avatar-width;
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-  box-shadow: 0 0 0 3px #000,
-              0 0 0 5px #fff;
-
-  &:hover {
-    box-shadow: 0 0 0 3px #000,
-                0 0 0 6px #CE2323;
+  width: 360px;
+  height: 420px;
+  background-color: #FFF;
+  box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  transform: translateY(-100%);
+  &.animate {
+    animation: shot 2400ms linear 1s forwards;
   }
-
-  z-index: 9;
-
 }
 
 .info-link {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 680px;
+  bottom: -5px;
+  transform: translate(-50%, 0);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .info-icon {
   display: block;
-  float: left;
   width: $icon-width;
   height: $icon-width;
-  overflow: hidden;
-  margin: 20px;
+  margin: 20px 10px;
 
   i {
     display: block;
@@ -83,24 +84,18 @@ $icon-width: 50px;
     cursor: pointer;
 
     &:hover {
-      border-radius: 6px;
-      color: rgba(255, 255, 255, .9);
-      background-color: #CE2323;
+      border-radius: 8px;
+      color: #FFF;
+      background-color: #83ADEC;
     }
   }
 }
 
-@media screen and (max-height: 500px) {
-  .info-container {
-    height: 37%;
+@keyframes shot {
+  0% {
+    transform: translateY(-100%);
   }
-}
-
-@media screen and (max-width: 767px) {
-  .info-icon {
-    &.extra {
-      opacity: 0;
-      visibility: hidden;
-    }
+  100% {
+    transform: translateY(0);
   }
 }
