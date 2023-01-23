@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   background-color: #83ADEC;
-  background-image: linear-gradient(180deg, 
+  background-image: linear-gradient(180deg,
     #83ADEC 40%, #a6dcef 40% 60%,
     #a6dcef 60% 75%,#f2aaaa 75% 90%,
     #e36387 90% 100%);
@@ -18,18 +18,6 @@
   width: 570px;
   height: 470px;
   margin-top: -300px;
-  &:after {
-    position: relative;
-    content: '「 🍺 Cheers! 」';
-    display: block;
-    top: 36%;
-    width: 100%;
-    height: 100px;
-    color: #FFF;
-    font-size: 2em;
-    text-align: center;
-    line-height: 100px;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -50,7 +38,7 @@
     radial-gradient(#E1DFE2 60%, transparent 60%),
     linear-gradient(90deg, #E1DFE2, #EAE8EB),
     linear-gradient(90deg, #EAE8EB, #E1DFE2),
-    linear-gradient(90deg, #85817E, rgba(47,43,43,0) 5% 95%,  #696461), 
+    linear-gradient(90deg, #85817E, rgba(47,43,43,0) 5% 95%,  #696461),
     linear-gradient(#4E4A49, #100C0D),
     linear-gradient(#312F32, #2A2A27, #363233);
   background-size: 50px 60px,
@@ -66,7 +54,7 @@
     top right,
     top left,
     top left,
-    bottom left, 
+    bottom left,
     bottom left;
   box-shadow: -1px 3px 2px 0px rgba(249,247,248, 0.65) inset;
 
@@ -81,7 +69,7 @@
   margin-right: auto;
   margin-top: 60px;
   border-radius: 3px;
-  
+
   background-image: linear-gradient(90deg, #474548 90%, #343233 90%),
     linear-gradient(90deg, #0E090D 10%, #4A4849 10%),
     linear-gradient(#4C4A4D 4%, #161214 9% 20%, #484445 30% 55%, #1A1617 80% 93%, #B0AFAD 99%);
@@ -112,7 +100,7 @@
 }
 
 .camera .bottom .labels .logo {
-  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight: 600;
   color: #CDCCC8;
@@ -186,7 +174,7 @@
     rgba(243,243,243,0.75),
     rgba(243,243,243,0) 15% 85%,
     rgba(243,243,243,0.75)
-  ), 
+  ),
   linear-gradient(#FEFEFE, #F9F7F8),
   linear-gradient(#DDD9DA, #E2DEDF, #EAE8EB, #F3F1F4);
   background-size: 100%, 100% 3px, 100%;
@@ -206,7 +194,7 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  
+
   background-image: radial-gradient(transparent, #000000),
     radial-gradient(rgba(51,53,54,0.4), transparent),
     radial-gradient(
@@ -242,7 +230,7 @@
       #3C3A3D 59% 60%, /* highlight */
       #241E1E 60% /* outer */
     );
-  
+
   background-size: 350px 350px, 350px 350px, 100%;
   background-position: bottom -100px left, top -120px right 10px,  center center;
   background-repeat: no-repeat;
@@ -265,12 +253,12 @@
       transparent 40%
     ),
     radial-gradient(
-      rgba(51,180,105,0.25) 13%, 
+      rgba(51,180,105,0.25) 13%,
       rgba(119,159,59,0.2) 53% 70%,
       rgba(119,159,59,0) 68%
     ),
     radial-gradient(
-      rgba(51,180,105,0.25) 23%, 
+      rgba(51,180,105,0.25) 23%,
       rgba(51,180,105,0.2) 53% 70%,
       rgba(51,180,105,0) 68%
     ),
@@ -393,7 +381,7 @@
       #292524 45% 55%,
       #696562 65% 75%,
       #C2BFBA 82% 86%,
-      #DEDAD7 90% 93%, 
+      #DEDAD7 90% 93%,
       #C9C6C1 94% 96%,
       #FFFEFA 98%),
     linear-gradient(#34332F, #3E3A38);

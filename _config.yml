@@ -1,6 +1,6 @@
 # Site settings
 title: 'Nice Shot'  # Your Title
-tagline: 'To find something interesting'  # A brief tagline for your site
+tagline: 'Connecting the dots'  # A brief tagline for your site
 timezone: 'Asia/Shanghai'
 destination: ./_site
 
@@ -12,16 +12,15 @@ markdown: kramdown
 #for local
 #highlighter: true
 baseurl: # the subpath of your site, e.g. /blog/
-codeurl: https://github.com/zchen9/code/issues
-fragmenturl: /fragment/
+fragment: /fragment/
 
 # Personal info
-avatar: ./images/zchen9_spring.png
-photo: ./images/hey.jpg
-email: zhao.zchen9@gmail.com
-github: https://github.com/zchen9
-twitter: https://twitter.com/ch1oechao
-ins: https://www.instagram.com/ch1oechao
+avatar: ./images/ME_2023.jpg
+photo: ./images/EmbraceTheWorld.jpg
+email: chao.zchen9@gmail.com
+github: https://github.com/ch1oechao
+instagram: https://www.instagram.com/ch1oechao
+tiktok: https://www.tiktok.com/@ch1oechao
 
 # Logo setting
 logocolor: '#000'

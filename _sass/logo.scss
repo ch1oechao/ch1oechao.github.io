@@ -36,14 +36,6 @@ $icon-width: 50px;
     background-color: rgba(0, 0, 0, .55);
     opacity: 0;
   }
-
-  &.switch {
-    background-image: url('../../images/fly.JPG');
-    &:after,
-    &:before {
-      opacity: 1;
-    }
-  }
 }
 
 .logo-svg {
