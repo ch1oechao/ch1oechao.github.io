@@ -1,7 +1,7 @@
 # Site settings
-title: 'Nice Shot'  # Your Title
-tagline: 'Connecting the dots'  # A brief tagline for your site
-timezone: 'Asia/Shanghai'
+title: "Nice Shot" # Your Title
+tagline: "Connecting the dots" # A brief tagline for your site
+timezone: "Asia/Shanghai"
 destination: ./_site
 
 # Build settings
@@ -17,10 +17,10 @@ fragment: /fragment/
 # Personal info
 avatar: ./images/ME_2023.jpg
 photo: ./images/EmbraceTheWorld.jpg
-email: chao.zchen9@gmail.com
+email: ch.ch1oechao@gmail.com
 github: https://github.com/ch1oechao
 instagram: https://www.instagram.com/ch1oechao
 tiktok: https://www.tiktok.com/@ch1oechao
 
 # Logo setting
-logocolor: '#000'
+logocolor: "#000"

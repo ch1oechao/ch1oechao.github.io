@@ -1,6 +1,6 @@
 ## Ciao
 
-Welcome to my little world. [[ Nice Shot ! ]](https://www.chen9.info/)
+Welcome to my little world. [[ Nice Shot ! ]](https://www.ch1oechao.me/)
 
 ## LICENSE
 
